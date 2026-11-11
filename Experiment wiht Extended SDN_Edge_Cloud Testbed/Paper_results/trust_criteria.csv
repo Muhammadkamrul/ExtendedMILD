@@ -1,0 +1,11 @@
+criterion,value,status,rule,why
+T1 data suitability,SUITABLE,PASS,"SUITABLE = PASS, MARGINAL = WARN",Results cannot be better than the data (see SUITABILITY_REPORT.md).
+T2 test-set size,"test events per intent {'api': 86, 'analytics': 69, 'telemetry': 104}, test days 6.20",PASS,PASS: >= 30 events per intent and >= 3 days,Small test sets give wide intervals and untestable FP comparisons.
+T3 precision (95 % CI half-width of MILD Det and DA),"Det 77.2 % +- 5.1 pp (n=259), DA 77.7 % +- 7.3 pp (n=124)",PASS,"PASS <= 10 pp, WARN <= 15 pp",Differences smaller than the interval cannot be claimed.
+"T4 seed stability (std of MILD Det/DA over seeds, at equal FP)",4.13 pp at equal FP; 8.12 pp with validation-tuned thresholds (5 seeds),PASS,"PASS <= 5 pp, WARN <= 10 pp (equal-FP spread)","The equal-FP spread measures how stable the learned risk ranking is. The spread with validation-tuned thresholds also contains threshold calibration noise, which T6 covers."
+"T5 generalisation (dev validation vs held-out test, MILD)","Det 88.7 -> 77.2, DA 79.7 -> 77.7",WARN,"PASS gap <= 10 pp, WARN <= 20 pp",A large drop means the tuning over-fitted the development period or the test period differs.
+T6 false alarms of MILD on the test set,4.18 FP steps/day (budget 3.0),PASS,"PASS <= 2 x budget, WARN <= 4 x budget",The FP budget is tuned on development data. Much higher test FP means poor calibration.
+"T7 no blind intent (MILD per-intent detection, min)","{'analytics': 57.4, 'api': 75.1, 'telemetry': 99.0}",PASS,"PASS >= 20 %, WARN >= 10 %",An intent that is almost never detected makes the macro averages misleading.
+T8 baselines are functional,collapsed (Det < 5 %): none,PASS,PASS if no baseline collapsed,Beating a collapsed baseline proves nothing. Check its job.log.
+T9 significance,"15 supported claims, 0 untestable comparisons, 0 where a baseline is better",PASS,PASS: at least one supported claim and nothing untestable,"Only differences with Holm-corrected p < 0.05 may be written as ""MILD outperforms""."
+T10 comparison at equal false-alarm rate,"13 supported claims, 0 where a baseline is better",PASS,PASS if no baseline is significantly better at equal FP,Removes the effect of different alarm rates (see training/opcurve/OPCURVE_REPORT.md).
