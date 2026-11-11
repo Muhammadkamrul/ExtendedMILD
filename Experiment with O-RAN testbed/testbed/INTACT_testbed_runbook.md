@@ -1,6 +1,4 @@
-# INTACT on WSL2 — srsRAN + Open5GS + Janus jbpf, bare-metal runbook
-
-Oct 27, 2026 · @kamrul
+# WSL2 — srsRAN + Open5GS + Janus jbpf, bare-metal runbook
 
 ## How to use this runbook
 
@@ -13,7 +11,7 @@ This runbook brings up srsRAN gNB (with jbpf) + srsUE + Open5GS + jrt-controller
 | Marker | Meaning |
 | --- | --- |
 | **\[PowerShell\]** | Run in Windows PowerShell, *not* in Linux. Admin rights only where it says *(Admin)*. |
-| **\[WSL\]** | Run inside the `intact` distro. Every new terminal starts with `source ~/intact/env.sh`. |
+| **\[WSL\]** | Run inside the `intact` distro ('intact' is a name given to the distro by us). Every new terminal starts with `source ~/intact/env.sh`. |
 | **\[SCRIPT\]** | The step is automated by a script this runbook creates for you. You run one command and read its verdict. |
 | **\[MANUAL\]** | You type or decide something yourself. |
 | **Terminal T1 … T6** | A separate terminal is required, because that process runs in the foreground. Part 8 gives a tmux launcher that replaces T2–T5 with one command; the manual layout is kept for debugging. |
