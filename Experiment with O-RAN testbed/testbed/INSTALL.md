@@ -4,7 +4,7 @@ This is optional. The dataset of the paper and regeneration of results need no t
 
 The guide has two parts:
 - **Part I** builds the testbed. It follows `INTACT_testbed_runbook.md` (in this folder), which gives every command, its expected output, and a fix for each known failure.
-- **Part II** installs the MILD package and collects scenario v5.
+- **Part II** installs the MILD package and collects scenario v5 (v5 is an identifier we gave to the 5th version of our RAN scenario setup).
 
 ## What you need
 
