@@ -1,0 +1,37 @@
+{
+  "rows": 29765,
+  "events_total": 859,
+  "events_by_intent": {
+    "analytics": 231,
+    "api": 283,
+    "telemetry": 345
+  },
+  "events_by_type": {
+    "conflicting_analytics_cause": 98,
+    "conflicting_api_cause": 123,
+    "conflicting_victim": 212,
+    "independent_analytics_slow": 68,
+    "independent_api_latency": 61,
+    "independent_telemetry_slow": 67,
+    "nonlinear_analytics_xor": 65,
+    "nonlinear_api_xor": 99,
+    "nonlinear_telemetry_xor": 66
+  },
+  "observed_fraction_by_intent": {
+    "analytics": 1.0,
+    "api": 1.0,
+    "telemetry": 1.0
+  },
+  "buildup_quantiles": {
+    "0.1": 8.0,
+    "0.25": 10.0,
+    "0.5": 12.0,
+    "0.75": 14.0,
+    "0.9": 16.0
+  },
+  "missing_values": 0,
+  "dev_rows": 20835,
+  "test_rows": 8930,
+  "inner_validation_start": 15626,
+  "lt_ref": 12.0
+}
