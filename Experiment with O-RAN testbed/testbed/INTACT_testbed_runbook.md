@@ -61,7 +61,7 @@ Every item below is now built into the step it names; nothing has to be applied 
 | 10.2 | With slicing on, UE rejected: AMF "Non cleartext IEs is included \[0xc\]", reject \[95\] | srsUE sent Requested NSSAI in the unprotected first message; Open5GS 2.8 refuses it. intact-fix-nssai drops that copy (the protected copy stays) and rebuilds srsue |
 
 ## Part 0 — What went wrong on PC2, and what changes
-
+(Note: PC2 is our first attempt to install the whole stack, which was not successful. We include here the lesson learned.)
 Almost every PC2 failure came from one source: Kubernetes gives every component a **new IP address on every restart**, while srsRAN's ZMQ links and Open5GS's service registry learn a peer's address **once, at startup**. Each restart left some component talking to a dead address. This runbook removes that whole class of failure by running every component as a normal process on fixed loopback addresses that never change.
 
 What was proven on PC2 and is reused here: the jbpf agent registers with jrt-controller; the `slice_mgmt` codelet loads into the `mac_sched_slice_mgmt` hook; a `SLICE_ALLOC_SET` (30/70) was written and read back exactly; PRACH and RRC worked at CQI 15. What never worked: NAS registration, which failed with Open5GS service-mesh timeouts.
