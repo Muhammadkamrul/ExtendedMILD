@@ -1,0 +1,10 @@
+# Tested with Python 3.10-3.13. Any TensorFlow 2.12+ works (Keras 2 or Keras 3).
+# For GPU on Linux use:  pip install "tensorflow[and-cuda]"
+tensorflow>=2.12
+numpy>=1.23
+pandas>=1.5
+scikit-learn>=1.2
+scipy>=1.9
+matplotlib>=3.6
+shap>=0.44          # only for the opintel group (SHAP explanations)
+tabulate>=0.9       # pretty tables in REPORT.md

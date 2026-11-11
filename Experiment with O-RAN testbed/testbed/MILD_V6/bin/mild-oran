@@ -1,0 +1,235 @@
+#!/usr/bin/env bash
+# mild-oran -- one command for MILD on the O-RAN testbed (srsRAN gNB + E2 agent, FlexRIC nearRT-RIC, N srsUEs,
+# Open5GS, WSL2). Installed into ~/intact/bin by install.sh. Run `mild-oran help` for the sub-commands.
+set -uo pipefail
+M="${MILD_HOME:-$HOME/intact/mild}"
+PKG="$M/MILD_ORAN"
+VENV="$M/venv"
+PY="$VENV/bin/python"
+STATE="${MILD_STATE:-$M/state}"
+TRAIN="${MILD_TRAIN:-$M/train}"
+cmd="${1:-help}"
+[ $# -gt 0 ] && shift
+
+need_py() { [ -x "$PY" ] || { echo "MILD venv missing ($PY): run  bash $PKG/install.sh"; exit 1; }; }
+as_root() { sudo -v || { echo "sudo authentication failed"; exit 1; }; sudo -E env PATH="$PATH" "$@"; }
+[ "$(id -u)" -eq 0 ] && [ "$cmd" != help ] && { echo "run mild-oran as your user, not as root (it uses sudo itself)"; exit 1; }
+
+case "$cmd" in
+  selftest)
+    need_py
+    S=$(mktemp -d /tmp/mild-selftest-XXXXXX)
+    echo "== self-test in $S (process-free model of the testbed, incl. the self-repair; about 5-10 min; NOT for the paper)"
+    "$PY" "$PKG/pipeline.py" --selftest --state "$S" "$@" || { echo "SELFTEST FAILED (collection part); see $S/pipeline.log"; exit 1; }
+    if "$PY" -c "import tensorflow" >/dev/null 2>&1; then
+      "$PY" "$PKG/train_now.py" --state "$S" --out "$S/train" --trials 2 --seeds 42 --rerank_top 0 --nice 0 \
+        || { echo "SELFTEST FAILED (training part); see $S/train/training.log"; exit 1; }
+      grep -q "Verdict" "$S/train/TRUST_REPORT.md" || { echo "SELFTEST FAILED: no trust report"; exit 1; }
+    else
+      echo "(TensorFlow not installed: training part skipped)"
+    fi
+    echo "SELFTEST PASSED  (scratch folder: $S -- delete it with: rm -rf $S)"
+    ;;
+  mocktest)
+    need_py
+    S="${MILD_MOCK_STATE:-/tmp/mild-mocktest}"
+    echo "== mock-RAN test in $S: the real MILD components and xApps against a stand-in cell and E2 front end"
+    echo "   (no RAN, no root, about 30-40 min, includes one simulated RAN crash and its automatic restart)"
+    "$PY" "$PKG/pipeline.py" --mock_ran --state "$S" "$@"
+    "$PY" "$PKG/check_collection.py" --state "$S"
+    ;;
+  build-xapps)
+    # Build the E2 front end of the three xApps (mild_e2gw) inside YOUR FlexRIC tree, with YOUR E2AP version.
+    source "$HOME/intact/env.sh" >/dev/null 2>&1
+    PE="${CFG:-$HOME/intact/configs}/flexric/paths.env"
+    [ -f "$PE" ] || { echo "STOP: $PE missing: build FlexRIC first (testbed runbook F.2, intact-flexric-build)"; exit 1; }
+    source "$PE"
+    B="$(dirname "$(dirname "$(dirname "$FR_RIC")")")"
+    SRC="$(sed -n 's/^CMAKE_HOME_DIRECTORY:INTERNAL=//p' "$B/CMakeCache.txt" 2>/dev/null)"
+    [ -d "$SRC/examples/xApp/c" ] || { echo "STOP: FlexRIC source not found from $B/CMakeCache.txt"; exit 1; }
+    J="${JOBS:-$(( $(nproc) > 4 ? 4 : $(nproc) ))}"
+    L="${LOGS:-$HOME/intact/logs}"; mkdir -p "$L"
+    echo "=== 1. sources -> $SRC/examples/xApp/c/mild (FlexRIC build tree $B, E2AP v$FR_E2AP)"
+    mkdir -p "$SRC/examples/xApp/c/mild"
+    cp "$PKG"/c/*.c "$PKG"/c/*.h "$PKG"/c/CMakeLists.txt "$SRC/examples/xApp/c/mild/"
+    grep -q 'add_subdirectory(mild)' "$SRC/examples/xApp/c/CMakeLists.txt" || \
+      echo 'add_subdirectory(mild)   # MILD on O-RAN (mild-oran build-xapps)' >> "$SRC/examples/xApp/c/CMakeLists.txt"
+    echo "  [ OK ] copied; FlexRIC's examples/xApp/c/CMakeLists.txt has one extra line (git -C $SRC diff shows it)"
+    echo "=== 2. re-configure the existing build tree (keeps E2AP v$FR_E2AP, KPM v3.00) and build (2-6 min)"
+    cmake -S "$SRC" -B "$B" >"$L/build-mild-cmake.log" 2>&1 || { echo "STOP: cmake failed: tail -30 $L/build-mild-cmake.log"; exit 1; }
+    cmake --build "$B" -j"$J" --target mild_e2gw mild_rc_enc_test mild_kpm_json_test >"$L/build-mild-make.log" 2>&1 \
+      || { grep -m5 -E 'error' "$L/build-mild-make.log" | sed 's/^/    /'; echo "STOP: build failed: $L/build-mild-make.log"; exit 1; }
+    D="$B/examples/xApp/c/mild"
+    echo "  [ OK ] built: $D/mild_e2gw"
+    echo "=== 3. self-tests (no RIC needed)"
+    OUT=$("$D/mild_rc_enc_test" 2>&1) && grep -m1 'round trip' <<<"$OUT" | sed 's/^/  [ OK ] E2SM-RC slice-PRB-quota control, encode + decode /' \
+      || { echo "$OUT" | head -5; echo "STOP: E2SM-RC encoder self-test failed"; exit 1; }
+    K=$("$D/mild_kpm_json_test" 2>&1) && grep -q '"fmt":3' <<<"$K" && echo "  [ OK ] E2SM-KPM indication -> JSON: cell + 3 UEs (one without values) decoded" \
+      || { echo "$K" | tail -5; echo "STOP: KPM-to-JSON self-test failed"; exit 1; }
+    echo "BUILD-XAPPS OK. The collector finds the binary itself (ric.e2gw=auto)."
+    ;;
+  ran-config)
+    # gNB config with E2SM-RC switched on (real actuation by xRC); the KPM-only config stays as the fallback.
+    source "$HOME/intact/env.sh" >/dev/null 2>&1
+    SRCF="${1:-$CFG/gnb_zmq_jbpf_e2.yaml}"; OUT="${SRCF%_e2.yaml}_e2rc.yaml"
+    G="$SRSRAN_DIR/build/apps/gnb/gnb"
+    pgrep -x gnb >/dev/null && { echo "STOP: the gNB is running. Run: mild-oran ran down"; exit 1; }
+    [ -f "$SRCF" ] || { echo "STOP: $SRCF not found (testbed runbook F.3: intact-e2-config)"; exit 1; }
+    python3 - "$SRCF" "$OUT" <<'PY' || exit 1
+import sys, yaml
+src, out = sys.argv[1:3]
+d = yaml.safe_load(open(src))
+e2 = d.get("e2") or {}
+if not e2.get("e2sm_kpm_enabled"):
+    sys.exit("STOP: the source config has no E2SM-KPM e2: section (run intact-e2-config first)")
+e2["e2sm_rc_enabled"] = True        # E2SM-RC: xRC's slice-level PRB quota control (style 2, action 6)
+e2["e2sm_ccc_enabled"] = False
+d["e2"] = e2
+lg = d.get("log") or {}
+lg.setdefault("filename", "/tmp/gnb.log")   # the gNB's own log file (mild-oran diag collects it)
+lg["e2ap_level"] = "info"                   # E2 setup / subscription / control procedures in that file
+d["log"] = lg
+yaml.safe_dump(d, open(out, "w"), sort_keys=False, default_flow_style=False)
+print("  e2:", e2, " log:", lg)
+PY
+    rc=0; out=$(cd "$(dirname "$G")" && sudo timeout 30 "$G" -c "$OUT" --dryrun 2>&1) || rc=$?
+    if [ $rc -ne 0 ] || grep -qiE 'not expected|error|invalid|could not' <<<"$out"; then
+      # older gNB builds without the e2ap_level option: same config without it
+      python3 - "$OUT" <<'PY2'
+import sys, yaml
+d = yaml.safe_load(open(sys.argv[1])); (d.get("log") or {}).pop("e2ap_level", None)
+yaml.safe_dump(d, open(sys.argv[1], "w"), sort_keys=False, default_flow_style=False)
+PY2
+      rc=0; out=$(cd "$(dirname "$G")" && sudo timeout 30 "$G" -c "$OUT" --dryrun 2>&1) || rc=$?
+    fi
+    if [ $rc -eq 0 ] && ! grep -qiE 'not expected|error|invalid|could not' <<<"$out"; then
+      echo "  [ OK ] ${OUT##*/} accepted by 'gnb --dryrun'"
+    else
+      echo "$out" | tail -5 | sed 's/^/        /'; rm -f "$OUT"; echo "  [FAIL] the gNB refused E2SM-RC in this build; xRC will run in shadow mode"; exit 1
+    fi
+    git -C "$CFG" add -A >/dev/null 2>&1 && git -C "$CFG" commit -qm "gNB with E2SM-KPM + E2SM-RC: ${OUT##*/}" >/dev/null 2>&1 || true
+    echo "RAN-CONFIG DONE: $OUT. The collector prefers it (ran.gnb_cfg_candidates) and falls back to ${SRCF##*/} if the RIC refuses it."
+    ;;
+  ran)
+    need_py; sub="${1:-status}"; [ $# -gt 0 ] && shift
+    case "$sub" in
+      up|down|restart|status) cd "$PKG" && as_root "$PY" -m mild_oran.ranctl "$sub" --state "$STATE" ;;
+      *) echo "usage: mild-oran ran up|down|restart|status"; exit 1 ;;
+    esac
+    ;;
+  preflight)
+    need_py; as_root "$PY" "$PKG/pipeline.py" --state "$STATE" --phase preflight "$@" ;;
+  collect)
+    need_py; mkdir -p "$STATE"; as_root "$PY" "$PKG/pipeline.py" --state "$STATE" "$@" ;;
+  status)
+    need_py; "$PY" "$PKG/check_collection.py" --state "$STATE" "$@" ;;
+  watch)
+    need_py; "$PY" "$PKG/check_collection.py" --state "$STATE" --watch "${1:-60}" ;;
+  learncheck)
+    need_py; "$PY" "$PKG/pipeline.py" --state "$STATE" --phase learncheck "$@" ;;
+  dataset)
+    need_py; "$PY" "$PKG/pipeline.py" --state "$STATE" --phase dataset "$@" ;;
+  train)
+    need_py; "$PY" "$PKG/train_now.py" --state "$STATE" --out "$TRAIN" "$@" ;;
+  pilotcheck)
+    need_py; "$PY" "$PKG/pilot_check.py" --state "$STATE" --out "${MILD_PILOT:-$M/pilot}" --train_python "$PY" "$@" ;;
+  export)
+    need_py; (cd "$PKG" && "$PY" -m mild_oran.deploy --train_out "$TRAIN" "$@") ;;
+  demo)
+    need_py; as_root "$PY" "$PKG/pipeline.py" --state "$STATE" --phase demo --deploy "$TRAIN/deploy" "$@" ;;
+  cleanup)
+    echo "removing netem qdiscs and leftover MILD processes (the RAN is not touched; use 'mild-oran ran down' for that)"
+    sudo tc qdisc del dev ogstun root 2>/dev/null && echo "  netem removed from ogstun" || echo "  ogstun: no qdisc"
+    for ns in $(ip netns list 2>/dev/null | awk '{print $1}' | grep -E '^ue[0-9]+$'); do
+      sudo ip netns exec "$ns" tc qdisc del dev tun_srsue root 2>/dev/null && echo "  netem removed from tun_srsue ($ns)"
+    done
+    sudo pkill -f 'mild_oran\.(xapps|ran)\.' 2>/dev/null && echo "  leftover MILD processes killed" || echo "  no leftover MILD process"
+    pkill -x mild_e2gw 2>/dev/null && echo "  leftover E2 front ends killed" || true
+    ;;
+  logs)
+    R=$(ls -1dt "$STATE"/runs/* 2>/dev/null | head -1)
+    [ -n "$R" ] || { echo "no run folder in $STATE/runs"; exit 1; }
+    if [ $# -eq 0 ]; then
+      ls -la "$R/logs" "$STATE/runtime"/e2gw_*.log "$STATE/ran" 2>/dev/null
+      echo "usage: mild-oran logs <xkpm|xsla|xrc|loadgen|traffic|appserver|ue_agent_ue1|...|e2gw_xkpm|e2gw_xsla|e2gw_xrc|ran>"
+      exit 0
+    fi
+    case "$1" in
+      e2gw_*) tail -n 50 -f "$STATE/runtime/$1.log" ;;
+      ran) tail -n 30 -f "$STATE/ran/"*.log ;;
+      *) tail -n 50 -f "$R/logs/$1.log" ;;
+    esac ;;
+  diag)
+    # Everything needed to analyse a problem, in one archive (read-only; safe while collecting).
+    source "$HOME/intact/env.sh" >/dev/null 2>&1
+    TS=$(date +%Y%m%d-%H%M%S); D=$(mktemp -d "/tmp/mild-diag-$TS-XXXX"); O="$D/mild-diag-$TS"; mkdir -p "$O"
+    RUNL="$HOME/intact/logs/run"
+    echo "== collecting into $O"
+    { echo "# $(date -Is)  $(uname -r)"; echo "## free -h"; free -h; echo "## ps (largest)";
+      ps -eo pid,etimes,comm,rss,%cpu,args --sort=-rss | head -25;
+      echo "## RAN processes"; pgrep -a -f 'gnb|nearRT-RIC|srsue|intact-zmq-broker|jrtc|mild_e2gw|mild_oran' ; } > "$O/system.txt" 2>&1
+    sudo -n dmesg -T 2>/dev/null | tail -300 > "$O/dmesg_tail.txt" || echo "(sudo -n dmesg not allowed)" > "$O/dmesg_tail.txt"
+    for f in "$STATE"/pipeline.log "$STATE"/calibration.json "$STATE"/calibration_report.md "$STATE"/ran_choice.json \
+             "$STATE"/state.json "$STATE"/overrides.json "$STATE"/remedy_state.json "$STATE"/ESCALATION.md \
+             "$STATE"/PIPELINE_SUMMARY.md; do [ -f "$f" ] && cp "$f" "$O/"; done
+    mkdir -p "$O/ran" "$O/runtime" "$O/run-logs" "$O/latest-run"
+    cp "$STATE"/ran/*.log "$STATE"/ran/*.json "$O/ran/" 2>/dev/null
+    cp "$STATE"/runtime/e2gw_*.log "$STATE"/runtime/ue_map.json "$STATE"/runtime/traffic*.json "$STATE"/runtime/ue_agent_*.json \
+       "$O/runtime/" 2>/dev/null
+    R=$(ls -1dt "$STATE"/runs/* 2>/dev/null | head -1); [ -n "$R" ] && cp -r "$R"/. "$O/latest-run/" 2>/dev/null
+    for f in "$RUNL"/*.out "$RUNL"/*.out.prev; do
+      [ -f "$f" ] || continue
+      b=$(basename "$f")
+      if [ "$(stat -c %s "$f")" -gt 2000000 ]; then
+        { head -200 "$f"; echo "... [cut: $(wc -l < "$f") lines] ..."; grep -v 'Pending event timeout' "$f" | tail -3000; } > "$O/run-logs/$b"
+      else cp "$f" "$O/run-logs/"; fi
+    done
+    # the gNB's own log file (log.filename in the gNB config in use, default /tmp/gnb.log)
+    G=$(python3 -c "import json;print((json.load(open('$STATE/ran_choice.json')) or {}).get('gnb_cfg',''))" 2>/dev/null)
+    [ -f "$G" ] || G="$HOME/intact/configs/gnb_zmq_jbpf_e2rc.yaml"; [ -f "$G" ] || G="$HOME/intact/configs/gnb_zmq_jbpf_e2.yaml"
+    cp "$G" "$O/" 2>/dev/null
+    GL=$(python3 -c "import yaml;print(((yaml.safe_load(open('$G')) or {}).get('log') or {}).get('filename','/tmp/gnb.log'))" 2>/dev/null)
+    GL="${GL:-/tmp/gnb.log}"
+    for f in "$GL" "$GL".*; do
+      [ -f "$f" ] || continue
+      b=$(basename "$f")
+      grep -nE 'E2AP|E2SM|E2-|RIC|Control|Subscription|assert|Assert|FATAL|fatal|error|Error|terminate|signal' "$f" | tail -4000 > "$O/gnb-log-$b.e2-and-errors.txt"
+      tail -3000 "$f" > "$O/gnb-log-$b.tail.txt"
+    done
+    [ -n "$(ls "$O"/gnb-log-* 2>/dev/null)" ] || echo "no gNB log file found at $GL" > "$O/gnb-log-MISSING.txt"
+    sudo -n chown -R "$(id -u):$(id -g)" "$O" 2>/dev/null
+    ART="$M/mild-diag-$TS.tar.gz"; tar -C "$D" -czf "$ART" "mild-diag-$TS" && rm -rf "$D"
+    echo "DIAG DONE: $ART  ($(du -h "$ART" | cut -f1)). Attach this file."
+    ;;
+  paths)
+    echo "package: $PKG"; echo "venv:    $VENV"; echo "state:   $STATE"; echo "train:   $TRAIN" ;;
+  help|*)
+    cat <<'EOT'
+mild-oran <command> [options]
+
+  build-xapps   build the xApps' FlexRIC E2 front end (mild_e2gw) in your FlexRIC tree, run its self-tests
+  ran-config    create the gNB config with E2SM-RC on (gnb_zmq_jbpf_e2rc.yaml), checked with gnb --dryrun
+  selftest      process-free self-test of collection, self-repair, QA, learnability and training (no RAN)
+  mocktest      real MILD components and xApps against a stand-in cell and E2 front end (no RAN, no root)
+  preflight     automated checks (sudo, scripts, FlexRIC, E2 front end, configs, netem, ports)     (sudo)
+                option: --ran  also bring the RAN up and check E2 + UEs (left running)
+  ran up|down|restart|status   the RAN in the testbed order, as the collector does it              (sudo)
+  collect       RAN up -> components -> calibrate (first time) -> 30-min segments; Ctrl+C stops   (sudo)
+                options: --hours H, --target_ticks N, --set key=value, --keep_going, --recalibrate,
+                         --new-attempt (archive what exists, keep its good data, start fresh)
+  status        one-shot health table of the collection (read-only, safe while collecting)
+  watch [N]     the same table every N seconds (default 60)
+  learncheck    learnability check now on the finished segments (read-only for the data)
+  dataset       merge (whole + salvaged + archived) into dataset/ and write the quality report
+  train         MILD + 5 baselines on the data so far, suitability + trust reports
+  pilotcheck    v2.3: go/no-go of a pilot dataset (headroom + MILD vs MLP/LSTM), see PILOT_REPORT.md
+  export        export a deployable MILD model from the training folder
+  demo          live MILD (Algorithm 1) on a fresh fault schedule of the live testbed           (sudo)
+  cleanup       remove netem qdiscs and kill leftover MILD processes (RAN untouched)              (sudo)
+  logs <name>   follow a component log of the latest run (no name: list them)
+  diag          collect every log needed to analyse a problem (incl. the gNB's own log) into one .tar.gz
+  paths         print the folders in use
+Environment overrides: MILD_HOME (default ~/intact/mild), MILD_STATE, MILD_TRAIN.
+EOT
+    ;;
+esac

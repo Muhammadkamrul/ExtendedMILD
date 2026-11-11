@@ -1,0 +1,9 @@
+# Collection, QA and learnability check (no TensorFlow needed)
+numpy>=1.23
+pandas>=1.5
+scipy>=1.9
+scikit-learn>=1.2
+psutil>=5.9
+tabulate>=0.9
+pyyaml>=6.0
+# Training (installed by install.sh unless --no-tf): tensorflow>=2.16 (CPU) or tensorflow[and-cuda] (GPU in WSL2)

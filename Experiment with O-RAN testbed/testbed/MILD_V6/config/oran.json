@@ -1,0 +1,277 @@
+{
+ "_comment": "MILD on O-RAN v2 (srsRAN gNB with E2 + 3 srsUEs through the ZMQ broker + Open5GS + FlexRIC nearRT-RIC, WSL2). Every value can be overridden with --set key=value (JSON values allowed, nested keys with dots, e.g. --set ric.api_rps=4). Values given to mild-oran collect are remembered in <state>/overrides.json.",
+ "tick_s": 4.0,
+ "sample_s": 0.5,
+ "rate_window_s": 8,
+ "persist": 3,
+ "segment_ticks": 450,
+ "min_segment_ticks": 100,
+ "target_ticks": 36000,
+ "base_seed": 3000,
+ "events_per_segment": 10,
+ "balanced_intents": false,
+ "p_nonlinear": 0.35,
+ "p_codrift": 0.35,
+ "p_independent": 0.3,
+ "mimics_per_10_events": 3,
+ "dur_min": 14,
+ "dur_max": 28,
+ "mimic_dur_min": 6,
+ "mimic_dur_max": 12,
+ "min_gap": 12,
+ "lag_min": 3,
+ "lag_max": 8,
+ "victim_min_dur": 6,
+ "warmup_ticks": 20,
+ "tail_ticks": 10,
+ "ramp_power": 1.5,
+ "drain_mult": 0.3,
+ "recovery_max": 10,
+ "watchdog_bad_ticks": 40,
+ "max_tick_overrun_frac": 0.1,
+ "targets": {
+  "api_p95_ms": 300.0,
+  "analytics_tput_min": "auto",
+  "telemetry_q_max": "auto",
+  "sri_low": 85.0,
+  "snet_low": 90.0
+ },
+ "telemetry_q_min": 25,
+ "initial_scales": {
+  "api": 6.0,
+  "analytics": 10.0,
+  "telemetry": 8.0,
+  "victim": 4.0,
+  "burst": 4.0,
+  "delay_ms": 120.0,
+  "loss_pct": 6.0,
+  "cell_load": 2.5,
+  "mimic": 0.35,
+  "nl_api": 0.8,
+  "nl_analytics": 0.8,
+  "nl_telemetry": 0.8
+ },
+ "scale_bounds": {
+  "api": [
+   1.5,
+   25.0
+  ],
+  "analytics": [
+   2.0,
+   60.0
+  ],
+  "telemetry": [
+   1.5,
+   40.0
+  ],
+  "victim": [
+   1.5,
+   40.0
+  ],
+  "burst": [
+   1.0,
+   5.0
+  ],
+  "delay_ms": [
+   10.0,
+   400.0
+  ],
+  "loss_pct": [
+   1.0,
+   25.0
+  ],
+  "cell_load": [
+   1.0,
+   4.0
+  ]
+ },
+ "network": {
+  "backend": "netem",
+  "dl_dev": "ogstun",
+  "ul_dev": "tun_srsue",
+  "dl_share": 0.5,
+  "netem_limit": 20000
+ },
+ "snet_sri_weights": {
+  "snet": {
+   "loss": 1.5,
+   "excess_rtt": 0.35,
+   "jitter": 0.6
+  },
+  "sri": {
+   "http_fail": 100.0,
+   "excess_rtt": 0.15,
+   "loss": 0.5
+  }
+ },
+ "weight_sweep_levels": [
+  [
+   0,
+   0
+  ],
+  [
+   10,
+   0.5
+  ],
+  [
+   25,
+   1.5
+  ],
+  [
+   45,
+   3
+  ],
+  [
+   70,
+   5
+  ],
+  [
+   100,
+   8
+  ],
+  [
+   140,
+   12
+  ]
+ ],
+ "weight_sweep_hold_s": 16,
+ "weight_target_snet_at_max": 55,
+ "weight_target_sri_at_max": 60,
+ "calib_baseline_ticks": 150,
+ "calib_drain_ticks": 14,
+ "calib_max_iter": 6,
+ "ran": {
+  "manage": "auto",
+  "intact_home": "~/intact",
+  "gnb_cfg": "auto",
+  "gnb_cfg_candidates": [
+   "configs/gnb_zmq_jbpf_e2rc.yaml",
+   "configs/gnb_zmq_jbpf_e2.yaml"
+  ],
+  "jbpf": "auto",
+  "n_ues": "auto",
+  "ue_slice_sd": "auto",
+  "slice_sst": 1,
+  "plmn_hex": "00F110",
+  "upf_ip": "10.45.0.1",
+  "app_port": 18080,
+  "sink_port": 5400,
+  "capacity_nominal_mbps": 20.0,
+  "capacity_min_ok_mbps": 8.0,
+  "ue_load_frac": 0.3,
+  "ue_shares": [
+   0.4,
+   0.35,
+   0.25,
+   0.25,
+   0.25
+  ],
+  "e2_stale_s": 10.0,
+  "ue_ip_missing_s": 12.0,
+  "probe_dead_s": 20.0,
+  "ping_interval_s": 0.2,
+  "http_interval_s": 1.0,
+  "http_timeout_s": 2.0,
+  "probe_timeout_s": 2.0,
+  "radio_speed_min": 0.5,
+  "start_timeout_ric_s": 30,
+  "start_timeout_gnb_s": 120,
+  "start_timeout_ues_s": 240,
+  "restart_backoff_s": [
+   20,
+   60,
+   120,
+   300,
+   600,
+   900
+  ],
+  "ran_down_wait_max_h": 12,
+  "stop_ran_on_exit": false,
+  "jrtc_log": "~/intact/logs/run/jrtc.out",
+  "plant_saturation_mult": 1.6
+ },
+ "ric": {
+  "e2gw": "auto",
+  "flexric_paths": "~/intact/configs/flexric/paths.env",
+  "kpm_period_ms": 1000,
+  "e2_wait_s": 30,
+  "actuation": "auto",
+  "storm_max_subs": 4,
+  "sub_req_max": 2,
+  "tel_record_ms": 60.0,
+  "tel_workers": 1,
+  "wal_segment_records": 200,
+  "store_retention_s": 600,
+  "delivery_q_max": 60,
+  "anl_sched_rate": 8.0,
+  "anl_sched_ms": 25.0,
+  "anl_row_ms": 15.0,
+  "anl_cell_ms": 8.0,
+  "anl_dash_ms": 25.0,
+  "sla_in_q_max": 40,
+  "sla_rlc_delay_ms": 30.0,
+  "sla_prb_util_hi": 85.0,
+  "sla_ctrl_period_s": 5.0,
+  "sla_sub_ttl_s": 10.0,
+  "dash_rps": 1.0,
+  "dash_jobs_mean": 3.0,
+  "api_rps": 6.0,
+  "api_rules_median": 25,
+  "api_base_ms": 20.0,
+  "api_workers": 2,
+  "api_deadline_s": 2.0,
+  "max_inflight": 64,
+  "rc_min_band": [
+   0,
+   40
+  ],
+  "rc_max_band": [
+   60,
+   100
+  ],
+  "rc_min_change_pct": 10,
+  "rc_min_interval_s": 5.0,
+  "rc_timeout_s": 8.0,
+  "gw_rotate_each_segment": true,
+  "load_amp": 0.5,
+  "day_s": 5760.0,
+  "mem_budget_mb": 384,
+  "storage_quota_mb": 256,
+  "nice": 5
+ },
+ "ports": {
+  "xkpm": 18101,
+  "xsla": 18102,
+  "xrc": 18103,
+  "loadgen": 18105,
+  "xsla_ingest": 18202,
+  "ctl_offset": 1000,
+  "mock_air": 18802,
+  "mock_udp_echo": 18081
+ },
+ "interp_max_gap": 3,
+ "label_policy": "strict",
+ "min_total_ticks": 30000,
+ "min_events_per_intent": 200,
+ "min_codrift_pairs": 150,
+ "max_missing_rate_per_segment": 0.2,
+ "qa": {
+  "check_every_ticks": 75,
+  "repair_after_ticks": 8,
+  "learnability_every_segments": 2,
+  "learnability_min_segments": 4,
+  "learnability_horizon": 10,
+  "stop_on_bad_data": true,
+  "max_remedy_attempts": 3,
+  "salvage_min_ticks": 100
+ },
+ "train": {
+  "paper_profile": "oran",
+  "trials": 20,
+  "fp_budget": 3.0,
+  "test_frac": 0.3,
+  "seeds": "42,43,44",
+  "fp_block": 240
+ },
+ "calib_max_ran_restarts": 3
+}
