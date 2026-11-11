@@ -1,4 +1,4 @@
-# Installation of srsRAN + Open5GS + Janus jbpf in WSL in windows
+# Installation of srsRAN + Open5GS + Janus jbpf + FlexRIC in WSL in windows
 
 ## How to use this runbook
 
