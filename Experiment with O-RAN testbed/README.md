@@ -1,4 +1,4 @@
-# MILD V6: saved-results reproduction and fresh training
+# MILD in O-RAN testbed: saved-results reproduction and fresh training
 
 This repository provides MILD V6 code, frozen input data, saved experiment outputs and prediction jobs. It supports two workflows:
 
