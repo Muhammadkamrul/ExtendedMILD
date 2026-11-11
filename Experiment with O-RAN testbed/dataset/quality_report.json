@@ -1,0 +1,287 @@
+{
+  "rows": 30181,
+  "segments": 43,
+  "merge": {
+    "interpolated_values": 3,
+    "dropped_rows": 0,
+    "dropped_events_gap": 0,
+    "pieces": 43,
+    "pieces_salvaged": 0,
+    "pieces_archived": 0,
+    "segments_discarded": 0,
+    "segments_ran_down": 1,
+    "segments_watchdog": 0,
+    "dropped_rows_event_windows": 0
+  },
+  "events_per_intent": {
+    "analytics": 139,
+    "api": 136,
+    "telemetry": 193
+  },
+  "codrift_pairs": 140,
+  "events_by_type_injected_observed": {
+    "conflicting_api_cause": [
+      83,
+      81
+    ],
+    "independent_api_latency": [
+      28,
+      28
+    ],
+    "nonlinear_api_xor": [
+      27,
+      27
+    ],
+    "conflicting_analytics_cause": [
+      83,
+      83
+    ],
+    "independent_analytics_slow": [
+      28,
+      28
+    ],
+    "nonlinear_analytics_xor": [
+      28,
+      28
+    ],
+    "conflicting_victim": [
+      166,
+      140
+    ],
+    "nonlinear_telemetry_xor": [
+      29,
+      27
+    ],
+    "independent_telemetry_slow": [
+      28,
+      26
+    ]
+  },
+  "unobserved_events": 32,
+  "buildup_quantiles": {
+    "0.1": 31.0,
+    "0.5": 38.0,
+    "0.9": 46.0
+  },
+  "slo_exceedance_outside_windows": {
+    "api": 0.00020562028786840302,
+    "analytics": 0.0,
+    "telemetry": 0.0
+  },
+  "mimics": 121,
+  "mimic_crossings": 0,
+  "crosstalk_crossings": 0,
+  "kpi_summary": {
+    "cpu_pct": {
+      "count": 30181.0,
+      "mean": 29.589,
+      "std": 11.322,
+      "min": 8.521,
+      "25%": 21.819,
+      "50%": 26.428,
+      "75%": 34.126,
+      "max": 78.618
+    },
+    "ram_pct": {
+      "count": 30181.0,
+      "mean": 0.047,
+      "std": 0.069,
+      "min": 0.0,
+      "25%": 0.011,
+      "50%": 0.026,
+      "75%": 0.049,
+      "max": 0.543
+    },
+    "storage_pct": {
+      "count": 30181.0,
+      "mean": 0.138,
+      "std": 0.019,
+      "min": 0.012,
+      "25%": 0.129,
+      "50%": 0.141,
+      "75%": 0.151,
+      "max": 0.186
+    },
+    "snet": {
+      "count": 30181.0,
+      "mean": 90.986,
+      "std": 17.294,
+      "min": 0.0,
+      "25%": 92.279,
+      "50%": 99.315,
+      "75%": 100.0,
+      "max": 100.0
+    },
+    "sri": {
+      "count": 30181.0,
+      "mean": 95.291,
+      "std": 10.204,
+      "min": 0.0,
+      "25%": 96.889,
+      "50%": 99.748,
+      "75%": 100.0,
+      "max": 100.0
+    },
+    "api_latency": {
+      "count": 30181.0,
+      "mean": 154.903,
+      "std": 377.753,
+      "min": 19.668,
+      "25%": 49.7,
+      "50%": 62.01,
+      "75%": 82.61,
+      "max": 2728.72
+    },
+    "analytics_tput": {
+      "count": 30181.0,
+      "mean": 13.636,
+      "std": 3.157,
+      "min": 3.936,
+      "25%": 12.176,
+      "50%": 13.472,
+      "75%": 15.149,
+      "max": 38.535
+    },
+    "telemetry_queue": {
+      "count": 30181.0,
+      "mean": 2.648,
+      "std": 8.911,
+      "min": 0.0,
+      "25%": 0.0,
+      "50%": 0.5,
+      "75%": 0.75,
+      "max": 114.25
+    }
+  },
+  "checks": {
+    "enough_ticks": true,
+    "enough_events_per_intent": true,
+    "enough_codrift_pairs": true,
+    "observed_fraction_ok": true,
+    "healthy_slo_exceedance_low": true,
+    "buildup_ok": true,
+    "kpis_vary": true,
+    "mimics_mostly_benign": true
+  },
+  "sufficient": true,
+  "valid": true,
+  "targets": {
+    "api_p95_ms": 311.0,
+    "analytics_tput_min": 6.96,
+    "telemetry_q_max": 25.0,
+    "sri_low": 85.0,
+    "snet_low": 90.0,
+    "analytics_floor_jobs_s": 11.6
+  },
+  "traffic": {
+    "ran_dl_mbps": {
+      "unit": "Mbit/s (E2SM-KPM DRB.UEThpDl, cell)",
+      "mean": 14.013953232165932,
+      "p5": 5.5735,
+      "p95": 25.782
+    },
+    "ran_ul_mbps": {
+      "unit": "Mbit/s",
+      "mean": 0.031255119114674795,
+      "p5": 0.020249999999999997,
+      "p95": 0.039
+    },
+    "ran_prb_dl_pct": {
+      "unit": "% (RRU.PrbTotDl)",
+      "mean": 43.68565488221066,
+      "p5": 18.5,
+      "p95": 78.0
+    },
+    "ue_sink_mbps": {
+      "unit": "Mbit/s received by all UEs",
+      "mean": 9.403528661582632,
+      "p5": 4.139255655146483,
+      "p95": 15.314900300025663
+    },
+    "e2_ind_hz": {
+      "unit": "E2 indications/s at xKPM",
+      "mean": 1.5164710673622899,
+      "p5": 1.2333155493621666,
+      "p95": 1.7586654073417691
+    },
+    "xkpm_rx_s": {
+      "unit": "KPM records/s",
+      "mean": 2.9788633577416257,
+      "p5": 2.375,
+      "p95": 3.925
+    },
+    "e2_extra_subs": {
+      "unit": "extra KPM subscriptions",
+      "mean": 0.071783572446241,
+      "p5": 0.0,
+      "p95": 1.0
+    },
+    "rc_ctrl_s": {
+      "unit": "E2SM-RC controls/s",
+      "mean": 0.00687306092987312,
+      "p5": 0.0,
+      "p95": 0.06569349030872744
+    },
+    "rc_ack_ms": {
+      "unit": "ms (RC control round trip)",
+      "mean": 5.908426215867473,
+      "p5": 3.6056850003660657,
+      "p95": 10.771574001410045
+    },
+    "e2_db_mb": {
+      "unit": "MB (FlexRIC SQLite)",
+      "mean": 12.068824988834033,
+      "p5": 8.077568,
+      "p95": 14.794488
+    },
+    "radio_speed": {
+      "unit": "x real time",
+      "mean": 0.714325734733773,
+      "p5": 0.58,
+      "p95": 0.83
+    },
+    "ue_rtt_ms": {
+      "unit": "ms",
+      "mean": 67.30231515734697,
+      "p5": 17.878125,
+      "p95": 212.4436666666667
+    },
+    "ue_http_ok_pct": {
+      "unit": "%",
+      "mean": 99.15254354284704,
+      "p5": 100.0,
+      "p95": 100.0
+    },
+    "per_second": {
+      "loadgen.api_sent": 68.9896,
+      "loadgen.dash_sent": 11.2295,
+      "xkpm.delivered": 32.4062,
+      "xkpm.gw_exits": 0.0055,
+      "xkpm.rows_dropped": 0.0,
+      "xkpm.rx_cell": 7.7584,
+      "xkpm.rx_replay": 0.0,
+      "xkpm.rx_ue": 24.6484,
+      "xkpm.sub_fail": 0.0,
+      "xkpm.sub_ok": 0.0427,
+      "xkpm.unsub": 0.0299,
+      "xrc.conflicts": 0.0,
+      "xrc.control": 0.1067,
+      "xrc.gw_exits": 0.0055,
+      "xrc.policy": 68.483,
+      "xrc.rc_ack": 0.0653,
+      "xrc.rc_fail": 0.0,
+      "xrc.rc_sent": 0.0653,
+      "xrc.rc_shadow": 0.0,
+      "xrc.rc_timeout": 0.0,
+      "xrc.rules": 2045.8106,
+      "xrc.shed": 0.5098,
+      "xsla.cell": 7.6686,
+      "xsla.ctrl_sent": 0.1089,
+      "xsla.dash": 33.6194,
+      "xsla.gw_exits": 0.0055,
+      "xsla.row": 24.648,
+      "xsla.sched": 81.869
+    },
+    "seconds_counted": 60362.0
+  }
+}

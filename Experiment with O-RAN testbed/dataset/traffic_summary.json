@@ -1,0 +1,111 @@
+{
+  "ran_dl_mbps": {
+    "unit": "Mbit/s (E2SM-KPM DRB.UEThpDl, cell)",
+    "mean": 14.013953232165932,
+    "p5": 5.5735,
+    "p95": 25.782
+  },
+  "ran_ul_mbps": {
+    "unit": "Mbit/s",
+    "mean": 0.031255119114674795,
+    "p5": 0.020249999999999997,
+    "p95": 0.039
+  },
+  "ran_prb_dl_pct": {
+    "unit": "% (RRU.PrbTotDl)",
+    "mean": 43.68565488221066,
+    "p5": 18.5,
+    "p95": 78.0
+  },
+  "ue_sink_mbps": {
+    "unit": "Mbit/s received by all UEs",
+    "mean": 9.403528661582632,
+    "p5": 4.139255655146483,
+    "p95": 15.314900300025663
+  },
+  "e2_ind_hz": {
+    "unit": "E2 indications/s at xKPM",
+    "mean": 1.5164710673622899,
+    "p5": 1.2333155493621666,
+    "p95": 1.7586654073417691
+  },
+  "xkpm_rx_s": {
+    "unit": "KPM records/s",
+    "mean": 2.9788633577416257,
+    "p5": 2.375,
+    "p95": 3.925
+  },
+  "e2_extra_subs": {
+    "unit": "extra KPM subscriptions",
+    "mean": 0.071783572446241,
+    "p5": 0.0,
+    "p95": 1.0
+  },
+  "rc_ctrl_s": {
+    "unit": "E2SM-RC controls/s",
+    "mean": 0.00687306092987312,
+    "p5": 0.0,
+    "p95": 0.06569349030872744
+  },
+  "rc_ack_ms": {
+    "unit": "ms (RC control round trip)",
+    "mean": 5.908426215867473,
+    "p5": 3.6056850003660657,
+    "p95": 10.771574001410045
+  },
+  "e2_db_mb": {
+    "unit": "MB (FlexRIC SQLite)",
+    "mean": 12.068824988834033,
+    "p5": 8.077568,
+    "p95": 14.794488
+  },
+  "radio_speed": {
+    "unit": "x real time",
+    "mean": 0.714325734733773,
+    "p5": 0.58,
+    "p95": 0.83
+  },
+  "ue_rtt_ms": {
+    "unit": "ms",
+    "mean": 67.30231515734697,
+    "p5": 17.878125,
+    "p95": 212.4436666666667
+  },
+  "ue_http_ok_pct": {
+    "unit": "%",
+    "mean": 99.15254354284704,
+    "p5": 100.0,
+    "p95": 100.0
+  },
+  "per_second": {
+    "loadgen.api_sent": 68.9896,
+    "loadgen.dash_sent": 11.2295,
+    "xkpm.delivered": 32.4062,
+    "xkpm.gw_exits": 0.0055,
+    "xkpm.rows_dropped": 0.0,
+    "xkpm.rx_cell": 7.7584,
+    "xkpm.rx_replay": 0.0,
+    "xkpm.rx_ue": 24.6484,
+    "xkpm.sub_fail": 0.0,
+    "xkpm.sub_ok": 0.0427,
+    "xkpm.unsub": 0.0299,
+    "xrc.conflicts": 0.0,
+    "xrc.control": 0.1067,
+    "xrc.gw_exits": 0.0055,
+    "xrc.policy": 68.483,
+    "xrc.rc_ack": 0.0653,
+    "xrc.rc_fail": 0.0,
+    "xrc.rc_sent": 0.0653,
+    "xrc.rc_shadow": 0.0,
+    "xrc.rc_timeout": 0.0,
+    "xrc.rules": 2045.8106,
+    "xrc.shed": 0.5098,
+    "xsla.cell": 7.6686,
+    "xsla.ctrl_sent": 0.1089,
+    "xsla.dash": 33.6194,
+    "xsla.gw_exits": 0.0055,
+    "xsla.row": 24.648,
+    "xsla.sched": 81.869
+  },
+  "seconds_counted": 60362.0
+}

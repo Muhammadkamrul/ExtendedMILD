@@ -1,0 +1,728 @@
+[
+  {
+    "type": "mimic_partial_api",
+    "start": 540,
+    "end": 581,
+    "segment": "seg_0000"
+  },
+  {
+    "type": "mimic_demand_creep",
+    "start": 780,
+    "end": 827,
+    "segment": "seg_0001"
+  },
+  {
+    "type": "mimic_partial_analytics",
+    "start": 1326,
+    "end": 1369,
+    "segment": "seg_0001"
+  },
+  {
+    "type": "mimic_network_only",
+    "start": 1474,
+    "end": 1510,
+    "segment": "seg_0002"
+  },
+  {
+    "type": "mimic_partial_telemetry",
+    "start": 1760,
+    "end": 1797,
+    "segment": "seg_0002"
+  },
+  {
+    "type": "mimic_partial_analytics",
+    "start": 1869,
+    "end": 1902,
+    "segment": "seg_0002"
+  },
+  {
+    "type": "mimic_network_only",
+    "start": 2284,
+    "end": 2324,
+    "segment": "seg_0003"
+  },
+  {
+    "type": "mimic_partial_telemetry",
+    "start": 2394,
+    "end": 2432,
+    "segment": "seg_0003"
+  },
+  {
+    "type": "mimic_demand_creep",
+    "start": 2710,
+    "end": 2750,
+    "segment": "seg_0003"
+  },
+  {
+    "type": "mimic_partial_api",
+    "start": 2922,
+    "end": 2960,
+    "segment": "seg_0004"
+  },
+  {
+    "type": "mimic_demand_creep",
+    "start": 3216,
+    "end": 3253,
+    "segment": "seg_0004"
+  },
+  {
+    "type": "mimic_demand_creep",
+    "start": 3442,
+    "end": 3478,
+    "segment": "seg_0004"
+  },
+  {
+    "type": "mimic_partial_telemetry",
+    "start": 3544,
+    "end": 3583,
+    "segment": "seg_0004"
+  },
+  {
+    "type": "mimic_demand_creep",
+    "start": 3667,
+    "end": 3701,
+    "segment": "seg_0005"
+  },
+  {
+    "type": "mimic_partial_api",
+    "start": 4357,
+    "end": 4391,
+    "segment": "seg_0006"
+  },
+  {
+    "type": "mimic_partial_analytics",
+    "start": 4531,
+    "end": 4568,
+    "segment": "seg_0006"
+  },
+  {
+    "type": "mimic_network_only",
+    "start": 4712,
+    "end": 4744,
+    "segment": "seg_0006"
+  },
+  {
+    "type": "mimic_demand_creep",
+    "start": 4881,
+    "end": 4913,
+    "segment": "seg_0006"
+  },
+  {
+    "type": "mimic_network_only",
+    "start": 5439,
+    "end": 5476,
+    "segment": "seg_0007"
+  },
+  {
+    "type": "mimic_demand_creep",
+    "start": 5535,
+    "end": 5570,
+    "segment": "seg_0007"
+  },
+  {
+    "type": "mimic_partial_analytics",
+    "start": 5685,
+    "end": 5727,
+    "segment": "seg_0007"
+  },
+  {
+    "type": "mimic_partial_analytics",
+    "start": 6088,
+    "end": 6125,
+    "segment": "seg_0008"
+  },
+  {
+    "type": "mimic_network_only",
+    "start": 6286,
+    "end": 6321,
+    "segment": "seg_0008"
+  },
+  {
+    "type": "mimic_network_only",
+    "start": 6940,
+    "end": 6977,
+    "segment": "seg_0009"
+  },
+  {
+    "type": "mimic_partial_telemetry",
+    "start": 7145,
+    "end": 7185,
+    "segment": "seg_0009"
+  },
+  {
+    "type": "mimic_partial_api",
+    "start": 7231,
+    "end": 7264,
+    "segment": "seg_0010"
+  },
+  {
+    "type": "mimic_demand_creep",
+    "start": 7333,
+    "end": 7369,
+    "segment": "seg_0010"
+  },
+  {
+    "type": "mimic_demand_creep",
+    "start": 7374,
+    "end": 7406,
+    "segment": "seg_0010"
+  },
+  {
+    "type": "mimic_partial_telemetry",
+    "start": 7768,
+    "end": 7805,
+    "segment": "seg_0010"
+  },
+  {
+    "type": "mimic_demand_creep",
+    "start": 8075,
+    "end": 8116,
+    "segment": "seg_0011"
+  },
+  {
+    "type": "mimic_demand_creep",
+    "start": 8266,
+    "end": 8299,
+    "segment": "seg_0011"
+  },
+  {
+    "type": "mimic_partial_api",
+    "start": 8455,
+    "end": 8500,
+    "segment": "seg_0011"
+  },
+  {
+    "type": "mimic_demand_creep",
+    "start": 9096,
+    "end": 9132,
+    "segment": "seg_0012"
+  },
+  {
+    "type": "mimic_network_only",
+    "start": 9198,
+    "end": 9233,
+    "segment": "seg_0012"
+  },
+  {
+    "type": "mimic_partial_api",
+    "start": 9288,
+    "end": 9335,
+    "segment": "seg_0012"
+  },
+  {
+    "type": "mimic_demand_creep",
+    "start": 9609,
+    "end": 9646,
+    "segment": "seg_0013"
+  },
+  {
+    "type": "mimic_partial_analytics",
+    "start": 9788,
+    "end": 9830,
+    "segment": "seg_0013"
+  },
+  {
+    "type": "mimic_network_only",
+    "start": 9905,
+    "end": 9939,
+    "segment": "seg_0013"
+  },
+  {
+    "type": "mimic_partial_analytics",
+    "start": 10123,
+    "end": 10158,
+    "segment": "seg_0014"
+  },
+  {
+    "type": "mimic_network_only",
+    "start": 10249,
+    "end": 10283,
+    "segment": "seg_0014"
+  },
+  {
+    "type": "mimic_partial_telemetry",
+    "start": 10590,
+    "end": 10627,
+    "segment": "seg_0014"
+  },
+  {
+    "type": "mimic_demand_creep",
+    "start": 10751,
+    "end": 10786,
+    "segment": "seg_0014"
+  },
+  {
+    "type": "mimic_network_only",
+    "start": 10895,
+    "end": 10931,
+    "segment": "seg_0015"
+  },
+  {
+    "type": "mimic_demand_creep",
+    "start": 11154,
+    "end": 11192,
+    "segment": "seg_0015"
+  },
+  {
+    "type": "mimic_partial_api",
+    "start": 11320,
+    "end": 11356,
+    "segment": "seg_0015"
+  },
+  {
+    "type": "mimic_partial_telemetry",
+    "start": 11418,
+    "end": 11452,
+    "segment": "seg_0015"
+  },
+  {
+    "type": "mimic_partial_api",
+    "start": 11558,
+    "end": 11592,
+    "segment": "seg_0016"
+  },
+  {
+    "type": "mimic_partial_telemetry",
+    "start": 11848,
+    "end": 11882,
+    "segment": "seg_0016"
+  },
+  {
+    "type": "mimic_demand_creep",
+    "start": 12171,
+    "end": 12208,
+    "segment": "seg_0016"
+  },
+  {
+    "type": "mimic_demand_creep",
+    "start": 12413,
+    "end": 12450,
+    "segment": "seg_0017"
+  },
+  {
+    "type": "mimic_partial_api",
+    "start": 12849,
+    "end": 12894,
+    "segment": "seg_0017"
+  },
+  {
+    "type": "mimic_demand_creep",
+    "start": 13134,
+    "end": 13178,
+    "segment": "seg_0018"
+  },
+  {
+    "type": "mimic_partial_api",
+    "start": 13417,
+    "end": 13458,
+    "segment": "seg_0018"
+  },
+  {
+    "type": "mimic_partial_analytics",
+    "start": 13715,
+    "end": 13752,
+    "segment": "seg_0019"
+  },
+  {
+    "type": "mimic_partial_telemetry",
+    "start": 13885,
+    "end": 13919,
+    "segment": "seg_0019"
+  },
+  {
+    "type": "mimic_demand_creep",
+    "start": 13974,
+    "end": 14020,
+    "segment": "seg_0019"
+  },
+  {
+    "type": "mimic_network_only",
+    "start": 14109,
+    "end": 14141,
+    "segment": "seg_0019"
+  },
+  {
+    "type": "mimic_demand_creep",
+    "start": 14495,
+    "end": 14535,
+    "segment": "seg_0020"
+  },
+  {
+    "type": "mimic_partial_analytics",
+    "start": 14600,
+    "end": 14643,
+    "segment": "seg_0020"
+  },
+  {
+    "type": "mimic_partial_telemetry",
+    "start": 14843,
+    "end": 14882,
+    "segment": "seg_0020"
+  },
+  {
+    "type": "mimic_network_only",
+    "start": 15066,
+    "end": 15108,
+    "segment": "seg_0020"
+  },
+  {
+    "type": "mimic_partial_telemetry",
+    "start": 15152,
+    "end": 15191,
+    "segment": "seg_0021"
+  },
+  {
+    "type": "mimic_demand_creep",
+    "start": 15451,
+    "end": 15484,
+    "segment": "seg_0021"
+  },
+  {
+    "type": "mimic_network_only",
+    "start": 15700,
+    "end": 15735,
+    "segment": "seg_0021"
+  },
+  {
+    "type": "mimic_partial_api",
+    "start": 15790,
+    "end": 15825,
+    "segment": "seg_0021"
+  },
+  {
+    "type": "mimic_partial_telemetry",
+    "start": 16013,
+    "end": 16053,
+    "segment": "seg_0022"
+  },
+  {
+    "type": "mimic_partial_api",
+    "start": 16060,
+    "end": 16095,
+    "segment": "seg_0022"
+  },
+  {
+    "type": "mimic_demand_creep",
+    "start": 16345,
+    "end": 16382,
+    "segment": "seg_0023"
+  },
+  {
+    "type": "mimic_demand_creep",
+    "start": 16504,
+    "end": 16541,
+    "segment": "seg_0023"
+  },
+  {
+    "type": "mimic_partial_api",
+    "start": 16837,
+    "end": 16878,
+    "segment": "seg_0023"
+  },
+  {
+    "type": "mimic_partial_api",
+    "start": 17083,
+    "end": 17124,
+    "segment": "seg_0024"
+  },
+  {
+    "type": "mimic_partial_analytics",
+    "start": 17278,
+    "end": 17318,
+    "segment": "seg_0024"
+  },
+  {
+    "type": "mimic_demand_creep",
+    "start": 17385,
+    "end": 17430,
+    "segment": "seg_0024"
+  },
+  {
+    "type": "mimic_network_only",
+    "start": 17657,
+    "end": 17700,
+    "segment": "seg_0025"
+  },
+  {
+    "type": "mimic_partial_analytics",
+    "start": 17930,
+    "end": 17962,
+    "segment": "seg_0025"
+  },
+  {
+    "type": "mimic_demand_creep",
+    "start": 18025,
+    "end": 18070,
+    "segment": "seg_0025"
+  },
+  {
+    "type": "mimic_demand_creep",
+    "start": 18370,
+    "end": 18405,
+    "segment": "seg_0026"
+  },
+  {
+    "type": "mimic_network_only",
+    "start": 18463,
+    "end": 18499,
+    "segment": "seg_0026"
+  },
+  {
+    "type": "mimic_partial_telemetry",
+    "start": 18895,
+    "end": 18930,
+    "segment": "seg_0026"
+  },
+  {
+    "type": "mimic_partial_analytics",
+    "start": 18991,
+    "end": 19032,
+    "segment": "seg_0026"
+  },
+  {
+    "type": "mimic_demand_creep",
+    "start": 19088,
+    "end": 19121,
+    "segment": "seg_0027"
+  },
+  {
+    "type": "mimic_network_only",
+    "start": 19195,
+    "end": 19241,
+    "segment": "seg_0027"
+  },
+  {
+    "type": "mimic_partial_telemetry",
+    "start": 19507,
+    "end": 19542,
+    "segment": "seg_0027"
+  },
+  {
+    "type": "mimic_demand_creep",
+    "start": 19818,
+    "end": 19851,
+    "segment": "seg_0029"
+  },
+  {
+    "type": "mimic_partial_api",
+    "start": 20125,
+    "end": 20163,
+    "segment": "seg_0029"
+  },
+  {
+    "type": "mimic_demand_creep",
+    "start": 20366,
+    "end": 20406,
+    "segment": "seg_0029"
+  },
+  {
+    "type": "mimic_demand_creep",
+    "start": 20528,
+    "end": 20563,
+    "segment": "seg_0030"
+  },
+  {
+    "type": "mimic_partial_api",
+    "start": 20647,
+    "end": 20682,
+    "segment": "seg_0030"
+  },
+  {
+    "type": "mimic_network_only",
+    "start": 21012,
+    "end": 21049,
+    "segment": "seg_0030"
+  },
+  {
+    "type": "mimic_partial_analytics",
+    "start": 21102,
+    "end": 21138,
+    "segment": "seg_0030"
+  },
+  {
+    "type": "mimic_demand_creep",
+    "start": 21531,
+    "end": 21572,
+    "segment": "seg_0031"
+  },
+  {
+    "type": "mimic_partial_analytics",
+    "start": 21638,
+    "end": 21677,
+    "segment": "seg_0031"
+  },
+  {
+    "type": "mimic_partial_analytics",
+    "start": 22135,
+    "end": 22171,
+    "segment": "seg_0032"
+  },
+  {
+    "type": "mimic_partial_telemetry",
+    "start": 22231,
+    "end": 22268,
+    "segment": "seg_0032"
+  },
+  {
+    "type": "mimic_network_only",
+    "start": 22429,
+    "end": 22468,
+    "segment": "seg_0032"
+  },
+  {
+    "type": "mimic_partial_telemetry",
+    "start": 22839,
+    "end": 22878,
+    "segment": "seg_0033"
+  },
+  {
+    "type": "mimic_demand_creep",
+    "start": 23376,
+    "end": 23409,
+    "segment": "seg_0034"
+  },
+  {
+    "type": "mimic_partial_telemetry",
+    "start": 23541,
+    "end": 23585,
+    "segment": "seg_0034"
+  },
+  {
+    "type": "mimic_partial_api",
+    "start": 23651,
+    "end": 23687,
+    "segment": "seg_0034"
+  },
+  {
+    "type": "mimic_partial_api",
+    "start": 23749,
+    "end": 23791,
+    "segment": "seg_0035"
+  },
+  {
+    "type": "mimic_demand_creep",
+    "start": 23988,
+    "end": 24023,
+    "segment": "seg_0035"
+  },
+  {
+    "type": "mimic_partial_api",
+    "start": 24685,
+    "end": 24729,
+    "segment": "seg_0036"
+  },
+  {
+    "type": "mimic_partial_analytics",
+    "start": 25239,
+    "end": 25285,
+    "segment": "seg_0037"
+  },
+  {
+    "type": "mimic_demand_creep",
+    "start": 25501,
+    "end": 25541,
+    "segment": "seg_0037"
+  },
+  {
+    "type": "mimic_partial_telemetry",
+    "start": 26026,
+    "end": 26065,
+    "segment": "seg_0038"
+  },
+  {
+    "type": "mimic_partial_analytics",
+    "start": 26197,
+    "end": 26234,
+    "segment": "seg_0038"
+  },
+  {
+    "type": "mimic_network_only",
+    "start": 26324,
+    "end": 26361,
+    "segment": "seg_0038"
+  },
+  {
+    "type": "mimic_network_only",
+    "start": 26641,
+    "end": 26677,
+    "segment": "seg_0039"
+  },
+  {
+    "type": "mimic_partial_telemetry",
+    "start": 26753,
+    "end": 26787,
+    "segment": "seg_0039"
+  },
+  {
+    "type": "mimic_demand_creep",
+    "start": 27400,
+    "end": 27441,
+    "segment": "seg_0040"
+  },
+  {
+    "type": "mimic_partial_telemetry",
+    "start": 27524,
+    "end": 27571,
+    "segment": "seg_0040"
+  },
+  {
+    "type": "mimic_demand_creep",
+    "start": 27848,
+    "end": 27882,
+    "segment": "seg_0040"
+  },
+  {
+    "type": "mimic_partial_api",
+    "start": 28058,
+    "end": 28093,
+    "segment": "seg_0041"
+  },
+  {
+    "type": "mimic_partial_analytics",
+    "start": 28297,
+    "end": 28332,
+    "segment": "seg_0041"
+  },
+  {
+    "type": "mimic_demand_creep",
+    "start": 28509,
+    "end": 28552,
+    "segment": "seg_0041"
+  },
+  {
+    "type": "mimic_demand_creep",
+    "start": 28612,
+    "end": 28646,
+    "segment": "seg_0041"
+  },
+  {
+    "type": "mimic_partial_api",
+    "start": 29046,
+    "end": 29088,
+    "segment": "seg_0042"
+  },
+  {
+    "type": "mimic_partial_analytics",
+    "start": 29314,
+    "end": 29353,
+    "segment": "seg_0042"
+  },
+  {
+    "type": "mimic_demand_creep",
+    "start": 29403,
+    "end": 29443,
+    "segment": "seg_0042"
+  },
+  {
+    "type": "mimic_demand_creep",
+    "start": 29714,
+    "end": 29755,
+    "segment": "seg_0043"
+  },
+  {
+    "type": "mimic_partial_analytics",
+    "start": 29760,
+    "end": 29797,
+    "segment": "seg_0043"
+  }
+]

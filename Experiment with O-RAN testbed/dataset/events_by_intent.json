@@ -1,0 +1,4220 @@
+{
+  "api": [
+    {
+      "start": 167,
+      "failure_time": 207,
+      "end": 222,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.769,
+      "segment": "seg_0000"
+    },
+    {
+      "start": 326,
+      "failure_time": 364,
+      "end": 379,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.76,
+      "segment": "seg_0000"
+    },
+    {
+      "start": 397,
+      "failure_time": 427,
+      "end": 444,
+      "type": "independent_api_latency",
+      "failure_observed": true,
+      "crossing_frac": 0.682,
+      "segment": "seg_0000"
+    },
+    {
+      "start": 841,
+      "failure_time": 876,
+      "end": 892,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.729,
+      "segment": "seg_0001"
+    },
+    {
+      "start": 985,
+      "failure_time": 1017,
+      "end": 1032,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.727,
+      "segment": "seg_0001"
+    },
+    {
+      "start": 1377,
+      "failure_time": 1420,
+      "end": 1429,
+      "type": "nonlinear_api_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.86,
+      "segment": "seg_0001"
+    },
+    {
+      "start": 1520,
+      "failure_time": 1563,
+      "end": 1573,
+      "type": "nonlinear_api_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.843,
+      "segment": "seg_0002"
+    },
+    {
+      "start": 1596,
+      "failure_time": 1628,
+      "end": 1642,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.727,
+      "segment": "seg_0002"
+    },
+    {
+      "start": 1704,
+      "failure_time": 1751,
+      "end": 1755,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.959,
+      "segment": "seg_0002"
+    },
+    {
+      "start": 1802,
+      "failure_time": 1846,
+      "end": 1851,
+      "type": "independent_api_latency",
+      "failure_observed": true,
+      "crossing_frac": 0.917,
+      "segment": "seg_0002"
+    },
+    {
+      "start": 2330,
+      "failure_time": 2371,
+      "end": 2378,
+      "type": "independent_api_latency",
+      "failure_observed": true,
+      "crossing_frac": 0.891,
+      "segment": "seg_0003"
+    },
+    {
+      "start": 2502,
+      "failure_time": 2544,
+      "end": 2553,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.857,
+      "segment": "seg_0003"
+    },
+    {
+      "start": 2642,
+      "failure_time": 2686,
+      "end": 2694,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.863,
+      "segment": "seg_0003"
+    },
+    {
+      "start": 3102,
+      "failure_time": 3134,
+      "end": 3147,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.744,
+      "segment": "seg_0004"
+    },
+    {
+      "start": 3163,
+      "failure_time": 3190,
+      "end": 3210,
+      "type": "nonlinear_api_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.614,
+      "segment": "seg_0004"
+    },
+    {
+      "start": 3258,
+      "failure_time": 3294,
+      "end": 3314,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.679,
+      "segment": "seg_0004"
+    },
+    {
+      "start": 3710,
+      "failure_time": 3731,
+      "end": 3754,
+      "type": "nonlinear_api_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.512,
+      "segment": "seg_0005"
+    },
+    {
+      "start": 3960,
+      "failure_time": 3996,
+      "end": 4010,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.75,
+      "segment": "seg_0005"
+    },
+    {
+      "start": 4085,
+      "failure_time": 4127,
+      "end": 4142,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.778,
+      "segment": "seg_0005"
+    },
+    {
+      "start": 4181,
+      "failure_time": 4219,
+      "end": 4223,
+      "type": "independent_api_latency",
+      "failure_observed": true,
+      "crossing_frac": 0.95,
+      "segment": "seg_0005"
+    },
+    {
+      "start": 4482,
+      "failure_time": 4521,
+      "end": 4528,
+      "type": "independent_api_latency",
+      "failure_observed": true,
+      "crossing_frac": 0.886,
+      "segment": "seg_0006"
+    },
+    {
+      "start": 4578,
+      "failure_time": 4610,
+      "end": 4626,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.696,
+      "segment": "seg_0006"
+    },
+    {
+      "start": 5179,
+      "failure_time": 5216,
+      "end": 5227,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.804,
+      "segment": "seg_0007"
+    },
+    {
+      "start": 5481,
+      "failure_time": 5510,
+      "end": 5523,
+      "type": "nonlinear_api_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.744,
+      "segment": "seg_0007"
+    },
+    {
+      "start": 5577,
+      "failure_time": 5609,
+      "end": 5622,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.762,
+      "segment": "seg_0007"
+    },
+    {
+      "start": 6143,
+      "failure_time": 6178,
+      "end": 6190,
+      "type": "independent_api_latency",
+      "failure_observed": true,
+      "crossing_frac": 0.795,
+      "segment": "seg_0008"
+    },
+    {
+      "start": 6230,
+      "failure_time": 6260,
+      "end": 6274,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.732,
+      "segment": "seg_0008"
+    },
+    {
+      "start": 6327,
+      "failure_time": 6355,
+      "end": 6371,
+      "type": "nonlinear_api_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.683,
+      "segment": "seg_0008"
+    },
+    {
+      "start": 6410,
+      "failure_time": 6439,
+      "end": 6462,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.592,
+      "segment": "seg_0008"
+    },
+    {
+      "start": 6585,
+      "failure_time": 6620,
+      "end": 6634,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.761,
+      "segment": "seg_0009"
+    },
+    {
+      "start": 6735,
+      "failure_time": 6765,
+      "end": 6780,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.714,
+      "segment": "seg_0009"
+    },
+    {
+      "start": 6993,
+      "failure_time": 7025,
+      "end": 7038,
+      "type": "independent_api_latency",
+      "failure_observed": true,
+      "crossing_frac": 0.762,
+      "segment": "seg_0009"
+    },
+    {
+      "start": 7275,
+      "failure_time": 7309,
+      "end": 7323,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.739,
+      "segment": "seg_0010"
+    },
+    {
+      "start": 7412,
+      "failure_time": 7448,
+      "end": 7464,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.72,
+      "segment": "seg_0010"
+    },
+    {
+      "start": 7852,
+      "failure_time": 7889,
+      "end": 7899,
+      "type": "nonlinear_api_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.822,
+      "segment": "seg_0010"
+    },
+    {
+      "start": 7960,
+      "failure_time": 7991,
+      "end": 8002,
+      "type": "independent_api_latency",
+      "failure_observed": true,
+      "crossing_frac": 0.775,
+      "segment": "seg_0011"
+    },
+    {
+      "start": 8023,
+      "failure_time": 8057,
+      "end": 8069,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.773,
+      "segment": "seg_0011"
+    },
+    {
+      "start": 8374,
+      "failure_time": 8414,
+      "end": 8427,
+      "type": "nonlinear_api_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.784,
+      "segment": "seg_0011"
+    },
+    {
+      "start": 8511,
+      "failure_time": 8552,
+      "end": 8566,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.788,
+      "segment": "seg_0011"
+    },
+    {
+      "start": 8760,
+      "failure_time": 8796,
+      "end": 8806,
+      "type": "independent_api_latency",
+      "failure_observed": true,
+      "crossing_frac": 0.837,
+      "segment": "seg_0012"
+    },
+    {
+      "start": 8910,
+      "failure_time": 8944,
+      "end": 8961,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.708,
+      "segment": "seg_0012"
+    },
+    {
+      "start": 9044,
+      "failure_time": 9071,
+      "end": 9090,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.628,
+      "segment": "seg_0012"
+    },
+    {
+      "start": 9428,
+      "failure_time": 9459,
+      "end": 9474,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.721,
+      "segment": "seg_0013"
+    },
+    {
+      "start": 9946,
+      "failure_time": 9978,
+      "end": 9989,
+      "type": "nonlinear_api_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.8,
+      "segment": "seg_0013"
+    },
+    {
+      "start": 10002,
+      "failure_time": 10035,
+      "end": 10047,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.767,
+      "segment": "seg_0013"
+    },
+    {
+      "start": 10373,
+      "failure_time": 10404,
+      "end": 10414,
+      "type": "nonlinear_api_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.795,
+      "segment": "seg_0014"
+    },
+    {
+      "start": 10424,
+      "failure_time": 10457,
+      "end": 10465,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.846,
+      "segment": "seg_0014"
+    },
+    {
+      "start": 10475,
+      "failure_time": 10509,
+      "end": 10517,
+      "type": "independent_api_latency",
+      "failure_observed": true,
+      "crossing_frac": 0.85,
+      "segment": "seg_0014"
+    },
+    {
+      "start": 10691,
+      "failure_time": 10737,
+      "end": 10748,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.836,
+      "segment": "seg_0014"
+    },
+    {
+      "start": 11036,
+      "failure_time": 11079,
+      "end": 11087,
+      "type": "independent_api_latency",
+      "failure_observed": true,
+      "crossing_frac": 0.878,
+      "segment": "seg_0015"
+    },
+    {
+      "start": 11096,
+      "failure_time": 11134,
+      "end": 11148,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.76,
+      "segment": "seg_0015"
+    },
+    {
+      "start": 11364,
+      "failure_time": 11397,
+      "end": 11413,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.717,
+      "segment": "seg_0015"
+    },
+    {
+      "start": 11598,
+      "failure_time": 11633,
+      "end": 11645,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.795,
+      "segment": "seg_0016"
+    },
+    {
+      "start": 11946,
+      "failure_time": 11978,
+      "end": 11993,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.727,
+      "segment": "seg_0016"
+    },
+    {
+      "start": 12029,
+      "failure_time": 12059,
+      "end": 12072,
+      "type": "nonlinear_api_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.75,
+      "segment": "seg_0016"
+    },
+    {
+      "start": 12331,
+      "failure_time": 12363,
+      "end": 12375,
+      "type": "independent_api_latency",
+      "failure_observed": true,
+      "crossing_frac": 0.78,
+      "segment": "seg_0017"
+    },
+    {
+      "start": 12456,
+      "failure_time": 12492,
+      "end": 12508,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.735,
+      "segment": "seg_0017"
+    },
+    {
+      "start": 12762,
+      "failure_time": 12801,
+      "end": 12810,
+      "type": "nonlinear_api_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.867,
+      "segment": "seg_0017"
+    },
+    {
+      "start": 12899,
+      "failure_time": 12930,
+      "end": 12944,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.738,
+      "segment": "seg_0017"
+    },
+    {
+      "start": 13004,
+      "failure_time": 13046,
+      "end": 13057,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.824,
+      "segment": "seg_0018"
+    },
+    {
+      "start": 13466,
+      "failure_time": 13497,
+      "end": 13507,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.775,
+      "segment": "seg_0018"
+    },
+    {
+      "start": 13516,
+      "failure_time": 13557,
+      "end": 13568,
+      "type": "independent_api_latency",
+      "failure_observed": true,
+      "crossing_frac": 0.82,
+      "segment": "seg_0018"
+    },
+    {
+      "start": 13837,
+      "failure_time": 13877,
+      "end": 13882,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.93,
+      "segment": "seg_0019"
+    },
+    {
+      "start": 14147,
+      "failure_time": 14176,
+      "end": 14189,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.707,
+      "segment": "seg_0019"
+    },
+    {
+      "start": 14212,
+      "failure_time": 14247,
+      "end": 14254,
+      "type": "nonlinear_api_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.875,
+      "segment": "seg_0019"
+    },
+    {
+      "start": 14447,
+      "failure_time": 14481,
+      "end": 14492,
+      "type": "independent_api_latency",
+      "failure_observed": true,
+      "crossing_frac": 0.791,
+      "segment": "seg_0020"
+    },
+    {
+      "start": 14718,
+      "failure_time": 14757,
+      "end": 14771,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.78,
+      "segment": "seg_0020"
+    },
+    {
+      "start": 14790,
+      "failure_time": 14826,
+      "end": 14841,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.75,
+      "segment": "seg_0020"
+    },
+    {
+      "start": 14888,
+      "failure_time": 14916,
+      "end": 14932,
+      "type": "nonlinear_api_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.683,
+      "segment": "seg_0020"
+    },
+    {
+      "start": 15322,
+      "failure_time": 15358,
+      "end": 15374,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.735,
+      "segment": "seg_0021"
+    },
+    {
+      "start": 15399,
+      "failure_time": 15427,
+      "end": 15448,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.609,
+      "segment": "seg_0021"
+    },
+    {
+      "start": 15490,
+      "failure_time": 15522,
+      "end": 15533,
+      "type": "independent_api_latency",
+      "failure_observed": true,
+      "crossing_frac": 0.8,
+      "segment": "seg_0021"
+    },
+    {
+      "start": 15875,
+      "failure_time": 15915,
+      "end": 15927,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.8,
+      "segment": "seg_0022"
+    },
+    {
+      "start": 16223,
+      "failure_time": 16253,
+      "end": 16265,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.75,
+      "segment": "seg_0023"
+    },
+    {
+      "start": 16387,
+      "failure_time": 16422,
+      "end": 16435,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.778,
+      "segment": "seg_0023"
+    },
+    {
+      "start": 16455,
+      "failure_time": 16488,
+      "end": 16498,
+      "type": "independent_api_latency",
+      "failure_observed": true,
+      "crossing_frac": 0.825,
+      "segment": "seg_0023"
+    },
+    {
+      "start": 16553,
+      "failure_time": 16581,
+      "end": 16598,
+      "type": "nonlinear_api_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.667,
+      "segment": "seg_0023"
+    },
+    {
+      "start": 17195,
+      "failure_time": 17224,
+      "end": 17239,
+      "type": "independent_api_latency",
+      "failure_observed": true,
+      "crossing_frac": 0.707,
+      "segment": "seg_0024"
+    },
+    {
+      "start": 17328,
+      "failure_time": 17363,
+      "end": 17375,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.795,
+      "segment": "seg_0024"
+    },
+    {
+      "start": 17498,
+      "failure_time": 17537,
+      "end": 17550,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.796,
+      "segment": "seg_0024"
+    },
+    {
+      "start": 17706,
+      "failure_time": 17749,
+      "end": 17763,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.782,
+      "segment": "seg_0025"
+    },
+    {
+      "start": 17774,
+      "failure_time": 17816,
+      "end": 17828,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.808,
+      "segment": "seg_0025"
+    },
+    {
+      "start": 18125,
+      "failure_time": 18157,
+      "end": 18163,
+      "type": "nonlinear_api_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.889,
+      "segment": "seg_0025"
+    },
+    {
+      "start": 18701,
+      "failure_time": 18740,
+      "end": 18751,
+      "type": "nonlinear_api_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.83,
+      "segment": "seg_0026"
+    },
+    {
+      "start": 18779,
+      "failure_time": 18808,
+      "end": 18821,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.744,
+      "segment": "seg_0026"
+    },
+    {
+      "start": 18831,
+      "failure_time": 18866,
+      "end": 18876,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.795,
+      "segment": "seg_0026"
+    },
+    {
+      "start": 18939,
+      "failure_time": 18977,
+      "end": 18986,
+      "type": "independent_api_latency",
+      "failure_observed": true,
+      "crossing_frac": 0.844,
+      "segment": "seg_0026"
+    },
+    {
+      "start": 19459,
+      "failure_time": 19489,
+      "end": 19503,
+      "type": "independent_api_latency",
+      "failure_observed": true,
+      "crossing_frac": 0.732,
+      "segment": "seg_0027"
+    },
+    {
+      "start": 19619,
+      "failure_time": 19653,
+      "end": 19670,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.708,
+      "segment": "seg_0027"
+    },
+    {
+      "start": 19677,
+      "failure_time": 19712,
+      "end": 19728,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.729,
+      "segment": "seg_0027"
+    },
+    {
+      "start": 19927,
+      "failure_time": 19965,
+      "end": 19977,
+      "type": "nonlinear_api_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.809,
+      "segment": "seg_0029"
+    },
+    {
+      "start": 20243,
+      "failure_time": 20278,
+      "end": 20290,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.795,
+      "segment": "seg_0029"
+    },
+    {
+      "start": 20315,
+      "failure_time": 20340,
+      "end": 20363,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.556,
+      "segment": "seg_0029"
+    },
+    {
+      "start": 20416,
+      "failure_time": 20443,
+      "end": 20456,
+      "type": "independent_api_latency",
+      "failure_observed": true,
+      "crossing_frac": 0.73,
+      "segment": "seg_0029"
+    },
+    {
+      "start": 20568,
+      "failure_time": 20592,
+      "end": 20618,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.511,
+      "segment": "seg_0030"
+    },
+    {
+      "start": 20687,
+      "failure_time": 20714,
+      "end": 20734,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.614,
+      "segment": "seg_0030"
+    },
+    {
+      "start": 20955,
+      "failure_time": 20994,
+      "end": 21005,
+      "type": "independent_api_latency",
+      "failure_observed": true,
+      "crossing_frac": 0.83,
+      "segment": "seg_0030"
+    },
+    {
+      "start": 21590,
+      "failure_time": 21623,
+      "end": 21633,
+      "type": "nonlinear_api_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.805,
+      "segment": "seg_0031"
+    },
+    {
+      "start": 21761,
+      "failure_time": 21799,
+      "end": 21814,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.745,
+      "segment": "seg_0031"
+    },
+    {
+      "start": 21996,
+      "failure_time": 22032,
+      "end": 22043,
+      "type": "nonlinear_api_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.818,
+      "segment": "seg_0032"
+    },
+    {
+      "start": 22181,
+      "failure_time": 22214,
+      "end": 22227,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.75,
+      "segment": "seg_0032"
+    },
+    {
+      "start": 22355,
+      "failure_time": 22394,
+      "end": 22409,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.765,
+      "segment": "seg_0032"
+    },
+    {
+      "start": 22554,
+      "failure_time": 22592,
+      "end": 22600,
+      "type": "independent_api_latency",
+      "failure_observed": true,
+      "crossing_frac": 0.864,
+      "segment": "seg_0032"
+    },
+    {
+      "start": 23263,
+      "failure_time": 23294,
+      "end": 23310,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.705,
+      "segment": "seg_0034"
+    },
+    {
+      "start": 23321,
+      "failure_time": 23359,
+      "end": 23374,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.76,
+      "segment": "seg_0034"
+    },
+    {
+      "start": 23594,
+      "failure_time": 23618,
+      "end": 23655,
+      "type": "nonlinear_api_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.49,
+      "segment": "seg_0034"
+    },
+    {
+      "start": 23797,
+      "failure_time": 23829,
+      "end": 23851,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.627,
+      "segment": "seg_0035"
+    },
+    {
+      "start": 23936,
+      "failure_time": 23971,
+      "end": 23985,
+      "type": "independent_api_latency",
+      "failure_observed": true,
+      "crossing_frac": 0.761,
+      "segment": "seg_0035"
+    },
+    {
+      "start": 24202,
+      "failure_time": 24243,
+      "end": 24256,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.804,
+      "segment": "seg_0035"
+    },
+    {
+      "start": 24274,
+      "failure_time": 24295,
+      "end": 24322,
+      "type": "nonlinear_api_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.467,
+      "segment": "seg_0035"
+    },
+    {
+      "start": 24479,
+      "failure_time": 24518,
+      "end": 24534,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.75,
+      "segment": "seg_0036"
+    },
+    {
+      "start": 24562,
+      "failure_time": 24591,
+      "end": 24602,
+      "type": "independent_api_latency",
+      "failure_observed": true,
+      "crossing_frac": 0.763,
+      "segment": "seg_0036"
+    },
+    {
+      "start": 24989,
+      "failure_time": 25025,
+      "end": 25040,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.75,
+      "segment": "seg_0036"
+    },
+    {
+      "start": 25376,
+      "failure_time": 25408,
+      "end": 25420,
+      "type": "nonlinear_api_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.78,
+      "segment": "seg_0037"
+    },
+    {
+      "start": 25451,
+      "failure_time": 25486,
+      "end": 25498,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.778,
+      "segment": "seg_0037"
+    },
+    {
+      "start": 25645,
+      "failure_time": 25682,
+      "end": 25696,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.771,
+      "segment": "seg_0037"
+    },
+    {
+      "start": 25910,
+      "failure_time": 25946,
+      "end": 25962,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.735,
+      "segment": "seg_0038"
+    },
+    {
+      "start": 26137,
+      "failure_time": 26170,
+      "end": 26185,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.733,
+      "segment": "seg_0038"
+    },
+    {
+      "start": 26371,
+      "failure_time": 26404,
+      "end": 26415,
+      "type": "nonlinear_api_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.805,
+      "segment": "seg_0038"
+    },
+    {
+      "start": 26512,
+      "failure_time": 26545,
+      "end": 26557,
+      "type": "independent_api_latency",
+      "failure_observed": true,
+      "crossing_frac": 0.786,
+      "segment": "seg_0038"
+    },
+    {
+      "start": 26873,
+      "failure_time": 26907,
+      "end": 26919,
+      "type": "independent_api_latency",
+      "failure_observed": true,
+      "crossing_frac": 0.791,
+      "segment": "seg_0039"
+    },
+    {
+      "start": 27132,
+      "failure_time": 27168,
+      "end": 27181,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.783,
+      "segment": "seg_0039"
+    },
+    {
+      "start": 27201,
+      "failure_time": 27237,
+      "end": 27252,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.75,
+      "segment": "seg_0039"
+    },
+    {
+      "start": 27334,
+      "failure_time": 27374,
+      "end": 27387,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.8,
+      "segment": "seg_0040"
+    },
+    {
+      "start": 27589,
+      "failure_time": 27619,
+      "end": 27631,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.75,
+      "segment": "seg_0040"
+    },
+    {
+      "start": 27893,
+      "failure_time": 27923,
+      "end": 27934,
+      "type": "nonlinear_api_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.769,
+      "segment": "seg_0040"
+    },
+    {
+      "start": 28114,
+      "failure_time": 28149,
+      "end": 28162,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.761,
+      "segment": "seg_0041"
+    },
+    {
+      "start": 28340,
+      "failure_time": 28373,
+      "end": 28387,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.75,
+      "segment": "seg_0041"
+    },
+    {
+      "start": 28464,
+      "failure_time": 28494,
+      "end": 28506,
+      "type": "nonlinear_api_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.769,
+      "segment": "seg_0041"
+    },
+    {
+      "start": 28664,
+      "failure_time": 28705,
+      "end": 28717,
+      "type": "independent_api_latency",
+      "failure_observed": true,
+      "crossing_frac": 0.82,
+      "segment": "seg_0041"
+    },
+    {
+      "start": 29001,
+      "failure_time": 29031,
+      "end": 29044,
+      "type": "independent_api_latency",
+      "failure_observed": true,
+      "crossing_frac": 0.75,
+      "segment": "seg_0042"
+    },
+    {
+      "start": 29167,
+      "failure_time": 29204,
+      "end": 29221,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.725,
+      "segment": "seg_0042"
+    },
+    {
+      "start": 29263,
+      "failure_time": 29291,
+      "end": 29307,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.683,
+      "segment": "seg_0042"
+    },
+    {
+      "start": 29579,
+      "failure_time": 29614,
+      "end": 29631,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.714,
+      "segment": "seg_0043"
+    },
+    {
+      "start": 29802,
+      "failure_time": 29832,
+      "end": 29850,
+      "type": "nonlinear_api_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.667,
+      "segment": "seg_0043"
+    },
+    {
+      "start": 30101,
+      "failure_time": 30131,
+      "end": 30144,
+      "type": "conflicting_api_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.75,
+      "segment": "seg_0043"
+    }
+  ],
+  "analytics": [
+    {
+      "start": 71,
+      "failure_time": 111,
+      "end": 123,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.769,
+      "segment": "seg_0000"
+    },
+    {
+      "start": 255,
+      "failure_time": 291,
+      "end": 303,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.75,
+      "segment": "seg_0000"
+    },
+    {
+      "start": 461,
+      "failure_time": 497,
+      "end": 506,
+      "type": "independent_analytics_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.8,
+      "segment": "seg_0000"
+    },
+    {
+      "start": 639,
+      "failure_time": 683,
+      "end": 693,
+      "type": "nonlinear_analytics_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.863,
+      "segment": "seg_0000"
+    },
+    {
+      "start": 1040,
+      "failure_time": 1076,
+      "end": 1089,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.735,
+      "segment": "seg_0001"
+    },
+    {
+      "start": 1106,
+      "failure_time": 1144,
+      "end": 1154,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.792,
+      "segment": "seg_0001"
+    },
+    {
+      "start": 1272,
+      "failure_time": 1312,
+      "end": 1318,
+      "type": "independent_analytics_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.87,
+      "segment": "seg_0001"
+    },
+    {
+      "start": 1653,
+      "failure_time": 1685,
+      "end": 1692,
+      "type": "nonlinear_analytics_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.889,
+      "segment": "seg_0002"
+    },
+    {
+      "start": 2000,
+      "failure_time": 2038,
+      "end": 2050,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.776,
+      "segment": "seg_0002"
+    },
+    {
+      "start": 2062,
+      "failure_time": 2101,
+      "end": 2108,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.848,
+      "segment": "seg_0002"
+    },
+    {
+      "start": 2443,
+      "failure_time": 2479,
+      "end": 2486,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.837,
+      "segment": "seg_0003"
+    },
+    {
+      "start": 2586,
+      "failure_time": 2617,
+      "end": 2627,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.756,
+      "segment": "seg_0003"
+    },
+    {
+      "start": 2768,
+      "failure_time": 2801,
+      "end": 2811,
+      "type": "nonlinear_analytics_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.825,
+      "segment": "seg_0003"
+    },
+    {
+      "start": 2826,
+      "failure_time": 2859,
+      "end": 2866,
+      "type": "independent_analytics_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.825,
+      "segment": "seg_0003"
+    },
+    {
+      "start": 3043,
+      "failure_time": 3074,
+      "end": 3084,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.756,
+      "segment": "seg_0004"
+    },
+    {
+      "start": 3325,
+      "failure_time": 3365,
+      "end": 3375,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.816,
+      "segment": "seg_0004"
+    },
+    {
+      "start": 3485,
+      "failure_time": 3523,
+      "end": 3528,
+      "type": "independent_analytics_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.884,
+      "segment": "seg_0004"
+    },
+    {
+      "start": 3792,
+      "failure_time": 3832,
+      "end": 3840,
+      "type": "nonlinear_analytics_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.889,
+      "segment": "seg_0005"
+    },
+    {
+      "start": 3874,
+      "failure_time": 3910,
+      "end": 3921,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.783,
+      "segment": "seg_0005"
+    },
+    {
+      "start": 4021,
+      "failure_time": 4056,
+      "end": 4066,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.778,
+      "segment": "seg_0005"
+    },
+    {
+      "start": 4398,
+      "failure_time": 4441,
+      "end": 4453,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.796,
+      "segment": "seg_0006"
+    },
+    {
+      "start": 4825,
+      "failure_time": 4865,
+      "end": 4875,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.8,
+      "segment": "seg_0006"
+    },
+    {
+      "start": 4919,
+      "failure_time": 4957,
+      "end": 4966,
+      "type": "nonlinear_analytics_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.864,
+      "segment": "seg_0006"
+    },
+    {
+      "start": 4975,
+      "failure_time": 5006,
+      "end": 5013,
+      "type": "independent_analytics_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.816,
+      "segment": "seg_0006"
+    },
+    {
+      "start": 5236,
+      "failure_time": 5275,
+      "end": 5282,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.848,
+      "segment": "seg_0007"
+    },
+    {
+      "start": 5316,
+      "failure_time": 5357,
+      "end": 5367,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.804,
+      "segment": "seg_0007"
+    },
+    {
+      "start": 5637,
+      "failure_time": 5670,
+      "end": 5677,
+      "type": "independent_analytics_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.825,
+      "segment": "seg_0007"
+    },
+    {
+      "start": 5790,
+      "failure_time": 5831,
+      "end": 5839,
+      "type": "nonlinear_analytics_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.872,
+      "segment": "seg_0008"
+    },
+    {
+      "start": 5867,
+      "failure_time": 5907,
+      "end": 5917,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.8,
+      "segment": "seg_0008"
+    },
+    {
+      "start": 5962,
+      "failure_time": 6004,
+      "end": 6015,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.792,
+      "segment": "seg_0008"
+    },
+    {
+      "start": 6510,
+      "failure_time": 6541,
+      "end": 6551,
+      "type": "nonlinear_analytics_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.795,
+      "segment": "seg_0009"
+    },
+    {
+      "start": 6668,
+      "failure_time": 6710,
+      "end": 6719,
+      "type": "independent_analytics_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.824,
+      "segment": "seg_0009"
+    },
+    {
+      "start": 6815,
+      "failure_time": 6857,
+      "end": 6866,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.824,
+      "segment": "seg_0009"
+    },
+    {
+      "start": 7069,
+      "failure_time": 7112,
+      "end": 7122,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.811,
+      "segment": "seg_0009"
+    },
+    {
+      "start": 7491,
+      "failure_time": 7525,
+      "end": 7535,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.773,
+      "segment": "seg_0010"
+    },
+    {
+      "start": 7604,
+      "failure_time": 7647,
+      "end": 7658,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.811,
+      "segment": "seg_0010"
+    },
+    {
+      "start": 7669,
+      "failure_time": 7707,
+      "end": 7713,
+      "type": "independent_analytics_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.864,
+      "segment": "seg_0010"
+    },
+    {
+      "start": 8127,
+      "failure_time": 8167,
+      "end": 8177,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.8,
+      "segment": "seg_0011"
+    },
+    {
+      "start": 8318,
+      "failure_time": 8349,
+      "end": 8358,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.795,
+      "segment": "seg_0011"
+    },
+    {
+      "start": 8579,
+      "failure_time": 8619,
+      "end": 8627,
+      "type": "nonlinear_analytics_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.87,
+      "segment": "seg_0011"
+    },
+    {
+      "start": 8840,
+      "failure_time": 8874,
+      "end": 8883,
+      "type": "nonlinear_analytics_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.85,
+      "segment": "seg_0012"
+    },
+    {
+      "start": 8993,
+      "failure_time": 9026,
+      "end": 9033,
+      "type": "independent_analytics_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.825,
+      "segment": "seg_0012"
+    },
+    {
+      "start": 9140,
+      "failure_time": 9180,
+      "end": 9191,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.784,
+      "segment": "seg_0012"
+    },
+    {
+      "start": 9239,
+      "failure_time": 9274,
+      "end": 9284,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.795,
+      "segment": "seg_0012"
+    },
+    {
+      "start": 9486,
+      "failure_time": 9519,
+      "end": 9531,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.75,
+      "segment": "seg_0013"
+    },
+    {
+      "start": 9546,
+      "failure_time": 9584,
+      "end": 9590,
+      "type": "independent_analytics_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.864,
+      "segment": "seg_0013"
+    },
+    {
+      "start": 9723,
+      "failure_time": 9755,
+      "end": 9766,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.744,
+      "segment": "seg_0013"
+    },
+    {
+      "start": 10180,
+      "failure_time": 10218,
+      "end": 10228,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.809,
+      "segment": "seg_0014"
+    },
+    {
+      "start": 10540,
+      "failure_time": 10578,
+      "end": 10587,
+      "type": "nonlinear_analytics_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.864,
+      "segment": "seg_0014"
+    },
+    {
+      "start": 10634,
+      "failure_time": 10666,
+      "end": 10676,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.762,
+      "segment": "seg_0014"
+    },
+    {
+      "start": 10975,
+      "failure_time": 11014,
+      "end": 11020,
+      "type": "independent_analytics_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.867,
+      "segment": "seg_0015"
+    },
+    {
+      "start": 11206,
+      "failure_time": 11249,
+      "end": 11259,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.811,
+      "segment": "seg_0015"
+    },
+    {
+      "start": 11270,
+      "failure_time": 11309,
+      "end": 11316,
+      "type": "nonlinear_analytics_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.907,
+      "segment": "seg_0015"
+    },
+    {
+      "start": 11463,
+      "failure_time": 11499,
+      "end": 11507,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.818,
+      "segment": "seg_0015"
+    },
+    {
+      "start": 11717,
+      "failure_time": 11755,
+      "end": 11763,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.826,
+      "segment": "seg_0016"
+    },
+    {
+      "start": 11777,
+      "failure_time": 11812,
+      "end": 11820,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.814,
+      "segment": "seg_0016"
+    },
+    {
+      "start": 11887,
+      "failure_time": 11922,
+      "end": 11928,
+      "type": "independent_analytics_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.854,
+      "segment": "seg_0016"
+    },
+    {
+      "start": 12273,
+      "failure_time": 12307,
+      "end": 12318,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.773,
+      "segment": "seg_0017"
+    },
+    {
+      "start": 12545,
+      "failure_time": 12579,
+      "end": 12588,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.791,
+      "segment": "seg_0017"
+    },
+    {
+      "start": 12610,
+      "failure_time": 12647,
+      "end": 12655,
+      "type": "nonlinear_analytics_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.86,
+      "segment": "seg_0017"
+    },
+    {
+      "start": 13069,
+      "failure_time": 13104,
+      "end": 13112,
+      "type": "independent_analytics_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.814,
+      "segment": "seg_0018"
+    },
+    {
+      "start": 13215,
+      "failure_time": 13246,
+      "end": 13257,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.756,
+      "segment": "seg_0018"
+    },
+    {
+      "start": 13297,
+      "failure_time": 13334,
+      "end": 13340,
+      "type": "nonlinear_analytics_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.902,
+      "segment": "seg_0018"
+    },
+    {
+      "start": 13592,
+      "failure_time": 13623,
+      "end": 13632,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.775,
+      "segment": "seg_0018"
+    },
+    {
+      "start": 13759,
+      "failure_time": 13794,
+      "end": 13804,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.795,
+      "segment": "seg_0019"
+    },
+    {
+      "start": 14054,
+      "failure_time": 14095,
+      "end": 14103,
+      "type": "independent_analytics_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.837,
+      "segment": "seg_0019"
+    },
+    {
+      "start": 14264,
+      "failure_time": 14296,
+      "end": 14305,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.78,
+      "segment": "seg_0019"
+    },
+    {
+      "start": 14542,
+      "failure_time": 14585,
+      "end": 14595,
+      "type": "nonlinear_analytics_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.86,
+      "segment": "seg_0020"
+    },
+    {
+      "start": 14650,
+      "failure_time": 14683,
+      "end": 14692,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.786,
+      "segment": "seg_0020"
+    },
+    {
+      "start": 14957,
+      "failure_time": 14993,
+      "end": 15003,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.783,
+      "segment": "seg_0020"
+    },
+    {
+      "start": 15254,
+      "failure_time": 15295,
+      "end": 15301,
+      "type": "independent_analytics_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.872,
+      "segment": "seg_0021"
+    },
+    {
+      "start": 15547,
+      "failure_time": 15587,
+      "end": 15595,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.833,
+      "segment": "seg_0021"
+    },
+    {
+      "start": 15630,
+      "failure_time": 15663,
+      "end": 15671,
+      "type": "nonlinear_analytics_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.846,
+      "segment": "seg_0021"
+    },
+    {
+      "start": 15744,
+      "failure_time": 15775,
+      "end": 15784,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.775,
+      "segment": "seg_0021"
+    },
+    {
+      "start": 16290,
+      "failure_time": 16326,
+      "end": 16335,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.8,
+      "segment": "seg_0023"
+    },
+    {
+      "start": 16633,
+      "failure_time": 16664,
+      "end": 16673,
+      "type": "nonlinear_analytics_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.816,
+      "segment": "seg_0023"
+    },
+    {
+      "start": 16699,
+      "failure_time": 16740,
+      "end": 16747,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.854,
+      "segment": "seg_0023"
+    },
+    {
+      "start": 16954,
+      "failure_time": 16986,
+      "end": 16993,
+      "type": "nonlinear_analytics_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.865,
+      "segment": "seg_0024"
+    },
+    {
+      "start": 17020,
+      "failure_time": 17053,
+      "end": 17061,
+      "type": "independent_analytics_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.805,
+      "segment": "seg_0024"
+    },
+    {
+      "start": 17442,
+      "failure_time": 17475,
+      "end": 17483,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.805,
+      "segment": "seg_0024"
+    },
+    {
+      "start": 17558,
+      "failure_time": 17594,
+      "end": 17603,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.8,
+      "segment": "seg_0024"
+    },
+    {
+      "start": 18076,
+      "failure_time": 18110,
+      "end": 18115,
+      "type": "independent_analytics_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.872,
+      "segment": "seg_0025"
+    },
+    {
+      "start": 18198,
+      "failure_time": 18236,
+      "end": 18246,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.792,
+      "segment": "seg_0025"
+    },
+    {
+      "start": 18264,
+      "failure_time": 18302,
+      "end": 18309,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.844,
+      "segment": "seg_0025"
+    },
+    {
+      "start": 18510,
+      "failure_time": 18547,
+      "end": 18558,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.787,
+      "segment": "seg_0026"
+    },
+    {
+      "start": 18579,
+      "failure_time": 18620,
+      "end": 18630,
+      "type": "nonlinear_analytics_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.854,
+      "segment": "seg_0026"
+    },
+    {
+      "start": 18642,
+      "failure_time": 18676,
+      "end": 18688,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.739,
+      "segment": "seg_0026"
+    },
+    {
+      "start": 19132,
+      "failure_time": 19169,
+      "end": 19179,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.787,
+      "segment": "seg_0027"
+    },
+    {
+      "start": 19246,
+      "failure_time": 19286,
+      "end": 19293,
+      "type": "independent_analytics_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.851,
+      "segment": "seg_0027"
+    },
+    {
+      "start": 19325,
+      "failure_time": 19360,
+      "end": 19371,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.761,
+      "segment": "seg_0027"
+    },
+    {
+      "start": 19389,
+      "failure_time": 19422,
+      "end": 19430,
+      "type": "nonlinear_analytics_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.868,
+      "segment": "seg_0027"
+    },
+    {
+      "start": 19860,
+      "failure_time": 19894,
+      "end": 19902,
+      "type": "nonlinear_analytics_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.85,
+      "segment": "seg_0029"
+    },
+    {
+      "start": 19988,
+      "failure_time": 20028,
+      "end": 20038,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.8,
+      "segment": "seg_0029"
+    },
+    {
+      "start": 20168,
+      "failure_time": 20201,
+      "end": 20213,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.733,
+      "segment": "seg_0029"
+    },
+    {
+      "start": 20756,
+      "failure_time": 20792,
+      "end": 20802,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.783,
+      "segment": "seg_0030"
+    },
+    {
+      "start": 20831,
+      "failure_time": 20874,
+      "end": 20886,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.782,
+      "segment": "seg_0030"
+    },
+    {
+      "start": 21056,
+      "failure_time": 21090,
+      "end": 21100,
+      "type": "nonlinear_analytics_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.829,
+      "segment": "seg_0030"
+    },
+    {
+      "start": 21165,
+      "failure_time": 21196,
+      "end": 21204,
+      "type": "independent_analytics_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.795,
+      "segment": "seg_0030"
+    },
+    {
+      "start": 21253,
+      "failure_time": 21288,
+      "end": 21298,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.778,
+      "segment": "seg_0031"
+    },
+    {
+      "start": 21332,
+      "failure_time": 21363,
+      "end": 21371,
+      "type": "independent_analytics_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.795,
+      "segment": "seg_0031"
+    },
+    {
+      "start": 21463,
+      "failure_time": 21498,
+      "end": 21510,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.761,
+      "segment": "seg_0031"
+    },
+    {
+      "start": 22076,
+      "failure_time": 22110,
+      "end": 22119,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.791,
+      "segment": "seg_0032"
+    },
+    {
+      "start": 22273,
+      "failure_time": 22303,
+      "end": 22313,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.769,
+      "segment": "seg_0032"
+    },
+    {
+      "start": 22475,
+      "failure_time": 22508,
+      "end": 22517,
+      "type": "nonlinear_analytics_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.846,
+      "segment": "seg_0032"
+    },
+    {
+      "start": 22725,
+      "failure_time": 22759,
+      "end": 22770,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.756,
+      "segment": "seg_0033"
+    },
+    {
+      "start": 22784,
+      "failure_time": 22825,
+      "end": 22830,
+      "type": "independent_analytics_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.891,
+      "segment": "seg_0033"
+    },
+    {
+      "start": 23132,
+      "failure_time": 23168,
+      "end": 23181,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.75,
+      "segment": "seg_0034"
+    },
+    {
+      "start": 23205,
+      "failure_time": 23243,
+      "end": 23252,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.826,
+      "segment": "seg_0034"
+    },
+    {
+      "start": 23476,
+      "failure_time": 23513,
+      "end": 23522,
+      "type": "independent_analytics_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.804,
+      "segment": "seg_0034"
+    },
+    {
+      "start": 24053,
+      "failure_time": 24087,
+      "end": 24098,
+      "type": "nonlinear_analytics_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.81,
+      "segment": "seg_0035"
+    },
+    {
+      "start": 24133,
+      "failure_time": 24173,
+      "end": 24181,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.833,
+      "segment": "seg_0035"
+    },
+    {
+      "start": 24363,
+      "failure_time": 24397,
+      "end": 24407,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.773,
+      "segment": "seg_0035"
+    },
+    {
+      "start": 24628,
+      "failure_time": 24671,
+      "end": 24678,
+      "type": "independent_analytics_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.86,
+      "segment": "seg_0036"
+    },
+    {
+      "start": 24767,
+      "failure_time": 24808,
+      "end": 24819,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.804,
+      "segment": "seg_0036"
+    },
+    {
+      "start": 24851,
+      "failure_time": 24884,
+      "end": 24893,
+      "type": "nonlinear_analytics_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.825,
+      "segment": "seg_0036"
+    },
+    {
+      "start": 24919,
+      "failure_time": 24962,
+      "end": 24976,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.768,
+      "segment": "seg_0036"
+    },
+    {
+      "start": 25188,
+      "failure_time": 25218,
+      "end": 25225,
+      "type": "independent_analytics_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.811,
+      "segment": "seg_0037"
+    },
+    {
+      "start": 25553,
+      "failure_time": 25595,
+      "end": 25605,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.824,
+      "segment": "seg_0037"
+    },
+    {
+      "start": 25708,
+      "failure_time": 25748,
+      "end": 25763,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.741,
+      "segment": "seg_0037"
+    },
+    {
+      "start": 25982,
+      "failure_time": 26017,
+      "end": 26024,
+      "type": "nonlinear_analytics_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.897,
+      "segment": "seg_0038"
+    },
+    {
+      "start": 26268,
+      "failure_time": 26303,
+      "end": 26310,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.833,
+      "segment": "seg_0038"
+    },
+    {
+      "start": 26425,
+      "failure_time": 26464,
+      "end": 26476,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.78,
+      "segment": "seg_0038"
+    },
+    {
+      "start": 26698,
+      "failure_time": 26736,
+      "end": 26747,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.776,
+      "segment": "seg_0039"
+    },
+    {
+      "start": 26792,
+      "failure_time": 26837,
+      "end": 26846,
+      "type": "nonlinear_analytics_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.865,
+      "segment": "seg_0039"
+    },
+    {
+      "start": 27017,
+      "failure_time": 27048,
+      "end": 27053,
+      "type": "independent_analytics_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.861,
+      "segment": "seg_0039"
+    },
+    {
+      "start": 27068,
+      "failure_time": 27109,
+      "end": 27116,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.854,
+      "segment": "seg_0039"
+    },
+    {
+      "start": 27481,
+      "failure_time": 27512,
+      "end": 27519,
+      "type": "independent_analytics_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.816,
+      "segment": "seg_0040"
+    },
+    {
+      "start": 27643,
+      "failure_time": 27682,
+      "end": 27690,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.848,
+      "segment": "seg_0040"
+    },
+    {
+      "start": 27798,
+      "failure_time": 27832,
+      "end": 27842,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.773,
+      "segment": "seg_0040"
+    },
+    {
+      "start": 28174,
+      "failure_time": 28216,
+      "end": 28225,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.84,
+      "segment": "seg_0041"
+    },
+    {
+      "start": 28245,
+      "failure_time": 28278,
+      "end": 28289,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.767,
+      "segment": "seg_0041"
+    },
+    {
+      "start": 28557,
+      "failure_time": 28597,
+      "end": 28603,
+      "type": "nonlinear_analytics_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.909,
+      "segment": "seg_0041"
+    },
+    {
+      "start": 28771,
+      "failure_time": 28802,
+      "end": 28813,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.738,
+      "segment": "seg_0042"
+    },
+    {
+      "start": 28828,
+      "failure_time": 28861,
+      "end": 28869,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.805,
+      "segment": "seg_0042"
+    },
+    {
+      "start": 28913,
+      "failure_time": 28953,
+      "end": 28960,
+      "type": "independent_analytics_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.851,
+      "segment": "seg_0042"
+    },
+    {
+      "start": 29358,
+      "failure_time": 29391,
+      "end": 29400,
+      "type": "nonlinear_analytics_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.825,
+      "segment": "seg_0042"
+    },
+    {
+      "start": 29497,
+      "failure_time": 29529,
+      "end": 29541,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.744,
+      "segment": "seg_0043"
+    },
+    {
+      "start": 29663,
+      "failure_time": 29695,
+      "end": 29705,
+      "type": "conflicting_analytics_cause",
+      "failure_observed": true,
+      "crossing_frac": 0.762,
+      "segment": "seg_0043"
+    },
+    {
+      "start": 29889,
+      "failure_time": 29929,
+      "end": 29933,
+      "type": "independent_analytics_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.909,
+      "segment": "seg_0043"
+    }
+  ],
+  "telemetry": [
+    {
+      "start": 71,
+      "failure_time": 119,
+      "end": 125,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.923,
+      "segment": "seg_0000"
+    },
+    {
+      "start": 167,
+      "failure_time": 217,
+      "end": 220,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.962,
+      "segment": "seg_0000"
+    },
+    {
+      "start": 255,
+      "failure_time": 299,
+      "end": 304,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.917,
+      "segment": "seg_0000"
+    },
+    {
+      "start": 326,
+      "failure_time": 370,
+      "end": 377,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.88,
+      "segment": "seg_0000"
+    },
+    {
+      "start": 588,
+      "failure_time": 627,
+      "end": 630,
+      "type": "nonlinear_telemetry_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.975,
+      "segment": "seg_0000"
+    },
+    {
+      "start": 841,
+      "failure_time": 883,
+      "end": 890,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.875,
+      "segment": "seg_0001"
+    },
+    {
+      "start": 933,
+      "failure_time": 968,
+      "end": 974,
+      "type": "nonlinear_telemetry_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.897,
+      "segment": "seg_0001"
+    },
+    {
+      "start": 985,
+      "failure_time": 1026,
+      "end": 1031,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.932,
+      "segment": "seg_0001"
+    },
+    {
+      "start": 1040,
+      "failure_time": 1086,
+      "end": 1090,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.939,
+      "segment": "seg_0001"
+    },
+    {
+      "start": 1185,
+      "failure_time": 1224,
+      "end": 1229,
+      "type": "independent_telemetry_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.907,
+      "segment": "seg_0001"
+    },
+    {
+      "start": 1596,
+      "failure_time": 1637,
+      "end": 1641,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.932,
+      "segment": "seg_0002"
+    },
+    {
+      "start": 1918,
+      "failure_time": 1965,
+      "end": 1971,
+      "type": "independent_telemetry_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.904,
+      "segment": "seg_0002"
+    },
+    {
+      "start": 2000,
+      "failure_time": 2046,
+      "end": 2051,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.939,
+      "segment": "seg_0002"
+    },
+    {
+      "start": 2199,
+      "failure_time": 2244,
+      "end": 2249,
+      "type": "nonlinear_telemetry_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.938,
+      "segment": "seg_0003"
+    },
+    {
+      "start": 2502,
+      "failure_time": 2550,
+      "end": 2553,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.98,
+      "segment": "seg_0003"
+    },
+    {
+      "start": 2586,
+      "failure_time": 2624,
+      "end": 2628,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.927,
+      "segment": "seg_0003"
+    },
+    {
+      "start": 2642,
+      "failure_time": 2692,
+      "end": 2695,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.98,
+      "segment": "seg_0003"
+    },
+    {
+      "start": 2968,
+      "failure_time": 3015,
+      "end": 3020,
+      "type": "independent_telemetry_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.94,
+      "segment": "seg_0004"
+    },
+    {
+      "start": 3043,
+      "failure_time": 3081,
+      "end": 3085,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.927,
+      "segment": "seg_0004"
+    },
+    {
+      "start": 3102,
+      "failure_time": 3141,
+      "end": 3146,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.907,
+      "segment": "seg_0004"
+    },
+    {
+      "start": 3258,
+      "failure_time": 3304,
+      "end": 3313,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.868,
+      "segment": "seg_0004"
+    },
+    {
+      "start": 3325,
+      "failure_time": 3371,
+      "end": 3376,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.939,
+      "segment": "seg_0004"
+    },
+    {
+      "start": 3874,
+      "failure_time": 3917,
+      "end": 3922,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.935,
+      "segment": "seg_0005"
+    },
+    {
+      "start": 3960,
+      "failure_time": 4004,
+      "end": 4009,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.917,
+      "segment": "seg_0005"
+    },
+    {
+      "start": 4021,
+      "failure_time": 4063,
+      "end": 4067,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.933,
+      "segment": "seg_0005"
+    },
+    {
+      "start": 4085,
+      "failure_time": 4136,
+      "end": 4141,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.944,
+      "segment": "seg_0005"
+    },
+    {
+      "start": 4263,
+      "failure_time": 4300,
+      "end": 4305,
+      "type": "independent_telemetry_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.902,
+      "segment": "seg_0005"
+    },
+    {
+      "start": 4398,
+      "failure_time": 4448,
+      "end": 4453,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.926,
+      "segment": "seg_0006"
+    },
+    {
+      "start": 4578,
+      "failure_time": 4620,
+      "end": 4626,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.913,
+      "segment": "seg_0006"
+    },
+    {
+      "start": 4660,
+      "failure_time": 4702,
+      "end": 4706,
+      "type": "nonlinear_telemetry_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.955,
+      "segment": "seg_0006"
+    },
+    {
+      "start": 4749,
+      "failure_time": 4790,
+      "end": 4794,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.932,
+      "segment": "seg_0006"
+    },
+    {
+      "start": 4825,
+      "failure_time": 4871,
+      "end": 4876,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.92,
+      "segment": "seg_0006"
+    },
+    {
+      "start": 5098,
+      "failure_time": 5133,
+      "end": 5140,
+      "type": "nonlinear_telemetry_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.875,
+      "segment": "seg_0007"
+    },
+    {
+      "start": 5179,
+      "failure_time": 5222,
+      "end": 5227,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.935,
+      "segment": "seg_0007"
+    },
+    {
+      "start": 5316,
+      "failure_time": 5366,
+      "end": 5368,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.98,
+      "segment": "seg_0007"
+    },
+    {
+      "start": 5381,
+      "failure_time": 5421,
+      "end": 5427,
+      "type": "independent_telemetry_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.909,
+      "segment": "seg_0007"
+    },
+    {
+      "start": 5867,
+      "failure_time": 5914,
+      "end": 5918,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.94,
+      "segment": "seg_0008"
+    },
+    {
+      "start": 5962,
+      "failure_time": 6014,
+      "end": 6017,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.981,
+      "segment": "seg_0008"
+    },
+    {
+      "start": 6026,
+      "failure_time": 6067,
+      "end": 6071,
+      "type": "independent_telemetry_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.932,
+      "segment": "seg_0008"
+    },
+    {
+      "start": 6230,
+      "failure_time": 6267,
+      "end": 6272,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.902,
+      "segment": "seg_0008"
+    },
+    {
+      "start": 6410,
+      "failure_time": 6452,
+      "end": 6461,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.857,
+      "segment": "seg_0008"
+    },
+    {
+      "start": 6585,
+      "failure_time": 6629,
+      "end": 6633,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.957,
+      "segment": "seg_0009"
+    },
+    {
+      "start": 6735,
+      "failure_time": 6773,
+      "end": 6779,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.905,
+      "segment": "seg_0009"
+    },
+    {
+      "start": 6815,
+      "failure_time": 6864,
+      "end": 6868,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.961,
+      "segment": "seg_0009"
+    },
+    {
+      "start": 6884,
+      "failure_time": 6924,
+      "end": 6930,
+      "type": "nonlinear_telemetry_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.909,
+      "segment": "seg_0009"
+    },
+    {
+      "start": 7069,
+      "failure_time": 7120,
+      "end": 7124,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.962,
+      "segment": "seg_0009"
+    },
+    {
+      "start": 7275,
+      "failure_time": 7319,
+      "end": 7323,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.957,
+      "segment": "seg_0010"
+    },
+    {
+      "start": 7412,
+      "failure_time": 7458,
+      "end": 7463,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.92,
+      "segment": "seg_0010"
+    },
+    {
+      "start": 7491,
+      "failure_time": 7533,
+      "end": 7536,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.955,
+      "segment": "seg_0010"
+    },
+    {
+      "start": 7548,
+      "failure_time": 7588,
+      "end": 7593,
+      "type": "nonlinear_telemetry_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.93,
+      "segment": "seg_0010"
+    },
+    {
+      "start": 7604,
+      "failure_time": 7655,
+      "end": 7659,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.962,
+      "segment": "seg_0010"
+    },
+    {
+      "start": 7725,
+      "failure_time": 7761,
+      "end": 7764,
+      "type": "independent_telemetry_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.947,
+      "segment": "seg_0010"
+    },
+    {
+      "start": 8023,
+      "failure_time": 8063,
+      "end": 8068,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.909,
+      "segment": "seg_0011"
+    },
+    {
+      "start": 8127,
+      "failure_time": 8173,
+      "end": 8178,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.92,
+      "segment": "seg_0011"
+    },
+    {
+      "start": 8212,
+      "failure_time": 8256,
+      "end": 8261,
+      "type": "independent_telemetry_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.917,
+      "segment": "seg_0011"
+    },
+    {
+      "start": 8318,
+      "failure_time": 8355,
+      "end": 8359,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.949,
+      "segment": "seg_0011"
+    },
+    {
+      "start": 8511,
+      "failure_time": 8559,
+      "end": 8564,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.923,
+      "segment": "seg_0011"
+    },
+    {
+      "start": 8697,
+      "failure_time": 8740,
+      "end": 8745,
+      "type": "nonlinear_telemetry_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.935,
+      "segment": "seg_0012"
+    },
+    {
+      "start": 8910,
+      "failure_time": 8955,
+      "end": 8959,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.938,
+      "segment": "seg_0012"
+    },
+    {
+      "start": 9044,
+      "failure_time": 9081,
+      "end": 9089,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.86,
+      "segment": "seg_0012"
+    },
+    {
+      "start": 9140,
+      "failure_time": 9189,
+      "end": 9193,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.961,
+      "segment": "seg_0012"
+    },
+    {
+      "start": 9239,
+      "failure_time": 9280,
+      "end": 9284,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.932,
+      "segment": "seg_0012"
+    },
+    {
+      "start": 9428,
+      "failure_time": 9465,
+      "end": 9473,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.86,
+      "segment": "seg_0013"
+    },
+    {
+      "start": 9486,
+      "failure_time": 9527,
+      "end": 9532,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.932,
+      "segment": "seg_0013"
+    },
+    {
+      "start": 9658,
+      "failure_time": 9695,
+      "end": 9700,
+      "type": "independent_telemetry_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.902,
+      "segment": "seg_0013"
+    },
+    {
+      "start": 9723,
+      "failure_time": 9763,
+      "end": 9768,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.93,
+      "segment": "seg_0013"
+    },
+    {
+      "start": 9839,
+      "failure_time": 9883,
+      "end": 9891,
+      "type": "nonlinear_telemetry_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.88,
+      "segment": "seg_0013"
+    },
+    {
+      "start": 10180,
+      "failure_time": 10226,
+      "end": 10228,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.979,
+      "segment": "seg_0014"
+    },
+    {
+      "start": 10290,
+      "failure_time": 10326,
+      "end": 10335,
+      "type": "independent_telemetry_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.837,
+      "segment": "seg_0014"
+    },
+    {
+      "start": 10424,
+      "failure_time": 10462,
+      "end": 10464,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.974,
+      "segment": "seg_0014"
+    },
+    {
+      "start": 10634,
+      "failure_time": 10672,
+      "end": 10677,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.905,
+      "segment": "seg_0014"
+    },
+    {
+      "start": 10691,
+      "failure_time": 10741,
+      "end": 10748,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.909,
+      "segment": "seg_0014"
+    },
+    {
+      "start": 10847,
+      "failure_time": 10882,
+      "end": 10886,
+      "type": "nonlinear_telemetry_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.946,
+      "segment": "seg_0015"
+    },
+    {
+      "start": 11096,
+      "failure_time": 11142,
+      "end": 11147,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.92,
+      "segment": "seg_0015"
+    },
+    {
+      "start": 11206,
+      "failure_time": 11257,
+      "end": 11260,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.962,
+      "segment": "seg_0015"
+    },
+    {
+      "start": 11364,
+      "failure_time": 11405,
+      "end": 11412,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.891,
+      "segment": "seg_0015"
+    },
+    {
+      "start": 11463,
+      "failure_time": 11505,
+      "end": 11508,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.955,
+      "segment": "seg_0015"
+    },
+    {
+      "start": 11658,
+      "failure_time": 11696,
+      "end": 11702,
+      "type": "nonlinear_telemetry_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.905,
+      "segment": "seg_0016"
+    },
+    {
+      "start": 11777,
+      "failure_time": 11818,
+      "end": 11822,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.953,
+      "segment": "seg_0016"
+    },
+    {
+      "start": 11946,
+      "failure_time": 11986,
+      "end": 11992,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.909,
+      "segment": "seg_0016"
+    },
+    {
+      "start": 12087,
+      "failure_time": 12130,
+      "end": 12135,
+      "type": "independent_telemetry_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.915,
+      "segment": "seg_0016"
+    },
+    {
+      "start": 12273,
+      "failure_time": 12313,
+      "end": 12318,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.909,
+      "segment": "seg_0017"
+    },
+    {
+      "start": 12456,
+      "failure_time": 12500,
+      "end": 12507,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.898,
+      "segment": "seg_0017"
+    },
+    {
+      "start": 12545,
+      "failure_time": 12586,
+      "end": 12590,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.953,
+      "segment": "seg_0017"
+    },
+    {
+      "start": 12685,
+      "failure_time": 12723,
+      "end": 12727,
+      "type": "independent_telemetry_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.927,
+      "segment": "seg_0017"
+    },
+    {
+      "start": 12899,
+      "failure_time": 12937,
+      "end": 12942,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.905,
+      "segment": "seg_0017"
+    },
+    {
+      "start": 13004,
+      "failure_time": 13054,
+      "end": 13056,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.98,
+      "segment": "seg_0018"
+    },
+    {
+      "start": 13215,
+      "failure_time": 13254,
+      "end": 13258,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.951,
+      "segment": "seg_0018"
+    },
+    {
+      "start": 13369,
+      "failure_time": 13402,
+      "end": 13406,
+      "type": "nonlinear_telemetry_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.943,
+      "segment": "seg_0018"
+    },
+    {
+      "start": 13592,
+      "failure_time": 13629,
+      "end": 13633,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.925,
+      "segment": "seg_0018"
+    },
+    {
+      "start": 13759,
+      "failure_time": 13799,
+      "end": 13804,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.909,
+      "segment": "seg_0019"
+    },
+    {
+      "start": 13837,
+      "failure_time": 13878,
+      "end": 13881,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.953,
+      "segment": "seg_0019"
+    },
+    {
+      "start": 13927,
+      "failure_time": 13961,
+      "end": 13965,
+      "type": "independent_telemetry_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.919,
+      "segment": "seg_0019"
+    },
+    {
+      "start": 14147,
+      "failure_time": 14186,
+      "end": 14189,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.951,
+      "segment": "seg_0019"
+    },
+    {
+      "start": 14264,
+      "failure_time": 14302,
+      "end": 14307,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.927,
+      "segment": "seg_0019"
+    },
+    {
+      "start": 14327,
+      "failure_time": 14372,
+      "end": 14376,
+      "type": "nonlinear_telemetry_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.957,
+      "segment": "seg_0019"
+    },
+    {
+      "start": 14650,
+      "failure_time": 14691,
+      "end": 14693,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.976,
+      "segment": "seg_0020"
+    },
+    {
+      "start": 14718,
+      "failure_time": 14762,
+      "end": 14770,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.88,
+      "segment": "seg_0020"
+    },
+    {
+      "start": 14790,
+      "failure_time": 14835,
+      "end": 14840,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.938,
+      "segment": "seg_0020"
+    },
+    {
+      "start": 14957,
+      "failure_time": 15001,
+      "end": 15004,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.957,
+      "segment": "seg_0020"
+    },
+    {
+      "start": 15018,
+      "failure_time": 15056,
+      "end": 15060,
+      "type": "independent_telemetry_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.927,
+      "segment": "seg_0020"
+    },
+    {
+      "start": 15196,
+      "failure_time": 15236,
+      "end": 15240,
+      "type": "nonlinear_telemetry_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.952,
+      "segment": "seg_0021"
+    },
+    {
+      "start": 15322,
+      "failure_time": 15367,
+      "end": 15373,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.918,
+      "segment": "seg_0021"
+    },
+    {
+      "start": 15399,
+      "failure_time": 15438,
+      "end": 15448,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.848,
+      "segment": "seg_0021"
+    },
+    {
+      "start": 15744,
+      "failure_time": 15782,
+      "end": 15786,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.95,
+      "segment": "seg_0021"
+    },
+    {
+      "start": 15875,
+      "failure_time": 15924,
+      "end": 15926,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.98,
+      "segment": "seg_0022"
+    },
+    {
+      "start": 15951,
+      "failure_time": 15995,
+      "end": 16002,
+      "type": "independent_telemetry_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.88,
+      "segment": "seg_0022"
+    },
+    {
+      "start": 16103,
+      "failure_time": 16149,
+      "end": 16154,
+      "type": "nonlinear_telemetry_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.939,
+      "segment": "seg_0022"
+    },
+    {
+      "start": 16223,
+      "failure_time": 16261,
+      "end": 16264,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.95,
+      "segment": "seg_0023"
+    },
+    {
+      "start": 16290,
+      "failure_time": 16333,
+      "end": 16336,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.956,
+      "segment": "seg_0023"
+    },
+    {
+      "start": 16387,
+      "failure_time": 16430,
+      "end": 16433,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.956,
+      "segment": "seg_0023"
+    },
+    {
+      "start": 16776,
+      "failure_time": 16822,
+      "end": 16827,
+      "type": "independent_telemetry_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.939,
+      "segment": "seg_0023"
+    },
+    {
+      "start": 17129,
+      "failure_time": 17166,
+      "end": 17171,
+      "type": "nonlinear_telemetry_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.925,
+      "segment": "seg_0024"
+    },
+    {
+      "start": 17328,
+      "failure_time": 17371,
+      "end": 17373,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.977,
+      "segment": "seg_0024"
+    },
+    {
+      "start": 17498,
+      "failure_time": 17545,
+      "end": 17549,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.959,
+      "segment": "seg_0024"
+    },
+    {
+      "start": 17558,
+      "failure_time": 17600,
+      "end": 17604,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.933,
+      "segment": "seg_0024"
+    },
+    {
+      "start": 17706,
+      "failure_time": 17757,
+      "end": 17762,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.927,
+      "segment": "seg_0025"
+    },
+    {
+      "start": 17774,
+      "failure_time": 17824,
+      "end": 17828,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.962,
+      "segment": "seg_0025"
+    },
+    {
+      "start": 17864,
+      "failure_time": 17898,
+      "end": 17901,
+      "type": "independent_telemetry_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.944,
+      "segment": "seg_0025"
+    },
+    {
+      "start": 17973,
+      "failure_time": 18016,
+      "end": 18021,
+      "type": "nonlinear_telemetry_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.935,
+      "segment": "seg_0025"
+    },
+    {
+      "start": 18198,
+      "failure_time": 18242,
+      "end": 18247,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.917,
+      "segment": "seg_0025"
+    },
+    {
+      "start": 18264,
+      "failure_time": 18308,
+      "end": 18310,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.978,
+      "segment": "seg_0025"
+    },
+    {
+      "start": 18410,
+      "failure_time": 18454,
+      "end": 18460,
+      "type": "independent_telemetry_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.917,
+      "segment": "seg_0026"
+    },
+    {
+      "start": 18510,
+      "failure_time": 18554,
+      "end": 18559,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.936,
+      "segment": "seg_0026"
+    },
+    {
+      "start": 18642,
+      "failure_time": 18686,
+      "end": 18689,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.957,
+      "segment": "seg_0026"
+    },
+    {
+      "start": 18779,
+      "failure_time": 18816,
+      "end": 18820,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.949,
+      "segment": "seg_0026"
+    },
+    {
+      "start": 19132,
+      "failure_time": 19176,
+      "end": 19181,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.936,
+      "segment": "seg_0027"
+    },
+    {
+      "start": 19325,
+      "failure_time": 19369,
+      "end": 19372,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.957,
+      "segment": "seg_0027"
+    },
+    {
+      "start": 19554,
+      "failure_time": 19594,
+      "end": 19598,
+      "type": "nonlinear_telemetry_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.952,
+      "segment": "seg_0027"
+    },
+    {
+      "start": 19619,
+      "failure_time": 19664,
+      "end": 19668,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.938,
+      "segment": "seg_0027"
+    },
+    {
+      "start": 19677,
+      "failure_time": 19719,
+      "end": 19727,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.875,
+      "segment": "seg_0027"
+    },
+    {
+      "start": 20070,
+      "failure_time": 20106,
+      "end": 20110,
+      "type": "independent_telemetry_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.923,
+      "segment": "seg_0029"
+    },
+    {
+      "start": 20168,
+      "failure_time": 20210,
+      "end": 20214,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.933,
+      "segment": "seg_0029"
+    },
+    {
+      "start": 20243,
+      "failure_time": 20286,
+      "end": 20288,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.977,
+      "segment": "seg_0029"
+    },
+    {
+      "start": 20315,
+      "failure_time": 20354,
+      "end": 20362,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.867,
+      "segment": "seg_0029"
+    },
+    {
+      "start": 20568,
+      "failure_time": 20612,
+      "end": 20616,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.936,
+      "segment": "seg_0030"
+    },
+    {
+      "start": 20687,
+      "failure_time": 20725,
+      "end": 20732,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.864,
+      "segment": "seg_0030"
+    },
+    {
+      "start": 20756,
+      "failure_time": 20799,
+      "end": 20803,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.935,
+      "segment": "seg_0030"
+    },
+    {
+      "start": 20831,
+      "failure_time": 20881,
+      "end": 20888,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.909,
+      "segment": "seg_0030"
+    },
+    {
+      "start": 20903,
+      "failure_time": 20940,
+      "end": 20946,
+      "type": "nonlinear_telemetry_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.902,
+      "segment": "seg_0030"
+    },
+    {
+      "start": 21253,
+      "failure_time": 21295,
+      "end": 21299,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.933,
+      "segment": "seg_0031"
+    },
+    {
+      "start": 21395,
+      "failure_time": 21438,
+      "end": 21441,
+      "type": "independent_telemetry_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.956,
+      "segment": "seg_0031"
+    },
+    {
+      "start": 21463,
+      "failure_time": 21505,
+      "end": 21510,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.913,
+      "segment": "seg_0031"
+    },
+    {
+      "start": 21761,
+      "failure_time": 21809,
+      "end": 21813,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.941,
+      "segment": "seg_0031"
+    },
+    {
+      "start": 21847,
+      "failure_time": 21892,
+      "end": 21896,
+      "type": "nonlinear_telemetry_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.957,
+      "segment": "seg_0031"
+    },
+    {
+      "start": 22076,
+      "failure_time": 22118,
+      "end": 22120,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.977,
+      "segment": "seg_0032"
+    },
+    {
+      "start": 22181,
+      "failure_time": 22223,
+      "end": 22227,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.955,
+      "segment": "seg_0032"
+    },
+    {
+      "start": 22273,
+      "failure_time": 22311,
+      "end": 22314,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.974,
+      "segment": "seg_0032"
+    },
+    {
+      "start": 22355,
+      "failure_time": 22405,
+      "end": 22407,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.98,
+      "segment": "seg_0032"
+    },
+    {
+      "start": 22725,
+      "failure_time": 22769,
+      "end": 22771,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.978,
+      "segment": "seg_0033"
+    },
+    {
+      "start": 23041,
+      "failure_time": 23089,
+      "end": 23094,
+      "type": "nonlinear_telemetry_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.941,
+      "segment": "seg_0034"
+    },
+    {
+      "start": 23263,
+      "failure_time": 23303,
+      "end": 23308,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.909,
+      "segment": "seg_0034"
+    },
+    {
+      "start": 23321,
+      "failure_time": 23368,
+      "end": 23373,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.94,
+      "segment": "seg_0034"
+    },
+    {
+      "start": 23797,
+      "failure_time": 23844,
+      "end": 23850,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.922,
+      "segment": "seg_0035"
+    },
+    {
+      "start": 23858,
+      "failure_time": 23892,
+      "end": 23899,
+      "type": "independent_telemetry_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.85,
+      "segment": "seg_0035"
+    },
+    {
+      "start": 24202,
+      "failure_time": 24249,
+      "end": 24254,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.922,
+      "segment": "seg_0035"
+    },
+    {
+      "start": 24479,
+      "failure_time": 24528,
+      "end": 24532,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.942,
+      "segment": "seg_0036"
+    },
+    {
+      "start": 24767,
+      "failure_time": 24817,
+      "end": 24819,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.98,
+      "segment": "seg_0036"
+    },
+    {
+      "start": 24919,
+      "failure_time": 24971,
+      "end": 24976,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.929,
+      "segment": "seg_0036"
+    },
+    {
+      "start": 24989,
+      "failure_time": 25032,
+      "end": 25038,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.896,
+      "segment": "seg_0036"
+    },
+    {
+      "start": 25071,
+      "failure_time": 25105,
+      "end": 25110,
+      "type": "nonlinear_telemetry_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.919,
+      "segment": "seg_0036"
+    },
+    {
+      "start": 25291,
+      "failure_time": 25329,
+      "end": 25332,
+      "type": "independent_telemetry_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.95,
+      "segment": "seg_0037"
+    },
+    {
+      "start": 25451,
+      "failure_time": 25494,
+      "end": 25498,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.956,
+      "segment": "seg_0037"
+    },
+    {
+      "start": 25645,
+      "failure_time": 25690,
+      "end": 25694,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.938,
+      "segment": "seg_0037"
+    },
+    {
+      "start": 25708,
+      "failure_time": 25758,
+      "end": 25764,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.926,
+      "segment": "seg_0037"
+    },
+    {
+      "start": 25793,
+      "failure_time": 25836,
+      "end": 25840,
+      "type": "nonlinear_telemetry_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.956,
+      "segment": "seg_0037"
+    },
+    {
+      "start": 26070,
+      "failure_time": 26116,
+      "end": 26118,
+      "type": "independent_telemetry_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.979,
+      "segment": "seg_0038"
+    },
+    {
+      "start": 26137,
+      "failure_time": 26179,
+      "end": 26184,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.933,
+      "segment": "seg_0038"
+    },
+    {
+      "start": 26425,
+      "failure_time": 26470,
+      "end": 26476,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.9,
+      "segment": "seg_0038"
+    },
+    {
+      "start": 26698,
+      "failure_time": 26745,
+      "end": 26749,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.959,
+      "segment": "seg_0039"
+    },
+    {
+      "start": 26951,
+      "failure_time": 26995,
+      "end": 27001,
+      "type": "nonlinear_telemetry_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.917,
+      "segment": "seg_0039"
+    },
+    {
+      "start": 27132,
+      "failure_time": 27177,
+      "end": 27179,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.978,
+      "segment": "seg_0039"
+    },
+    {
+      "start": 27201,
+      "failure_time": 27247,
+      "end": 27250,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.958,
+      "segment": "seg_0039"
+    },
+    {
+      "start": 27334,
+      "failure_time": 27383,
+      "end": 27385,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.98,
+      "segment": "seg_0040"
+    },
+    {
+      "start": 27643,
+      "failure_time": 27688,
+      "end": 27690,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.978,
+      "segment": "seg_0040"
+    },
+    {
+      "start": 27729,
+      "failure_time": 27771,
+      "end": 27776,
+      "type": "nonlinear_telemetry_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.933,
+      "segment": "seg_0040"
+    },
+    {
+      "start": 27946,
+      "failure_time": 27986,
+      "end": 27990,
+      "type": "independent_telemetry_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.93,
+      "segment": "seg_0040"
+    },
+    {
+      "start": 28114,
+      "failure_time": 28156,
+      "end": 28162,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.913,
+      "segment": "seg_0041"
+    },
+    {
+      "start": 28174,
+      "failure_time": 28220,
+      "end": 28226,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.92,
+      "segment": "seg_0041"
+    },
+    {
+      "start": 28245,
+      "failure_time": 28287,
+      "end": 28290,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.977,
+      "segment": "seg_0041"
+    },
+    {
+      "start": 28340,
+      "failure_time": 28381,
+      "end": 28386,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.932,
+      "segment": "seg_0041"
+    },
+    {
+      "start": 28400,
+      "failure_time": 28438,
+      "end": 28442,
+      "type": "independent_telemetry_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.927,
+      "segment": "seg_0041"
+    },
+    {
+      "start": 28771,
+      "failure_time": 28810,
+      "end": 28814,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.929,
+      "segment": "seg_0042"
+    },
+    {
+      "start": 28828,
+      "failure_time": 28867,
+      "end": 28871,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.951,
+      "segment": "seg_0042"
+    },
+    {
+      "start": 29108,
+      "failure_time": 29148,
+      "end": 29153,
+      "type": "nonlinear_telemetry_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.93,
+      "segment": "seg_0042"
+    },
+    {
+      "start": 29167,
+      "failure_time": 29212,
+      "end": 29220,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.882,
+      "segment": "seg_0042"
+    },
+    {
+      "start": 29263,
+      "failure_time": 29301,
+      "end": 29305,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.927,
+      "segment": "seg_0042"
+    },
+    {
+      "start": 29497,
+      "failure_time": 29538,
+      "end": 29542,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.953,
+      "segment": "seg_0043"
+    },
+    {
+      "start": 29579,
+      "failure_time": 29625,
+      "end": 29630,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.939,
+      "segment": "seg_0043"
+    },
+    {
+      "start": 29663,
+      "failure_time": 29702,
+      "end": 29707,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.929,
+      "segment": "seg_0043"
+    },
+    {
+      "start": 29977,
+      "failure_time": 30013,
+      "end": 30018,
+      "type": "nonlinear_telemetry_xor",
+      "failure_observed": true,
+      "crossing_frac": 0.923,
+      "segment": "seg_0043"
+    },
+    {
+      "start": 30026,
+      "failure_time": 30070,
+      "end": 30074,
+      "type": "independent_telemetry_slow",
+      "failure_observed": true,
+      "crossing_frac": 0.936,
+      "segment": "seg_0043"
+    },
+    {
+      "start": 30101,
+      "failure_time": 30139,
+      "end": 30142,
+      "type": "conflicting_victim",
+      "failure_observed": true,
+      "crossing_frac": 0.95,
+      "segment": "seg_0043"
+    }
+  ]
+}
