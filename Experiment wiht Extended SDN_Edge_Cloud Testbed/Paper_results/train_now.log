@@ -1,9 +1,0 @@
-[2026-10-14 21:03:16] train_now: state=/home/windows/mild_sdn2_state_v3 out=/home/windows/mild_sdn2_train_v3_30k
-[2026-10-14 21:03:17] snapshot: copied 34 main segments
-[2026-10-14 21:03:17] dataset: 29765 rows, events {'analytics': 231, 'api': 283, 'telemetry': 345}, changed since the last run
-[2026-10-14 21:03:17] suitability: SUITABLE {"clean rows": "PASS", "test days (emulated, 1440 ticks/day)": "PASS", "expected test events per intent (min)": "PASS", "co-drift pairs (cause + victim)": "PASS", "observed failure fraction per type (min)": "PASS", "SLO exceedance outside event windows (max)": "PASS", "collector-v1 ticks excluded as API jam": "PASS", "interpolated KPI values": "PASS", "median build-up (failure_time - start), ticks": "PASS", "healthy-KPI shift dev -> test (max, in IQR units)": "PASS", "segments by collector version": "PASS", "every event type present in the test part (>= 5 each)": "PASS"}
-[2026-10-14 21:03:17] see /home/windows/mild_sdn2_train_v3_30k/SUITABILITY_REPORT.md
-[2026-10-14 21:03:17] training: nice -n 10 /home/windows/mild-venv/bin/python /home/windows/MILD_workspace/MILD_revision_bundle/MILD_unified_repro/autotrain.py --data_csv /home/windows/mild_sdn2_train_v3_30k/dataset/dataset.csv --events_json /home/windows/mild_sdn2_train_v3_30k/dataset/events_by_intent.json --out /home/windows/mild_sdn2_train_v3_30k/training --paper_profile sdn --trials 20 --fp_budget 3.0 --test_frac 0.300000 --seeds 42,43,44,45,46 --fp_block 240 --rerank_top 3 --opcurve_targets 1,2,3,5,8
-[2026-10-14 21:03:17] training log: /home/windows/mild_sdn2_train_v3_30k/training.log (jobs are cached; re-running continues)
-[2026-10-14 22:40:44] training finished rc=0 after 97.4 min
-[2026-10-14 22:40:44] TRUST VERDICT: USABLE WITH CAVEATS. Read /home/windows/mild_sdn2_train_v3_30k/TRUST_REPORT.md
