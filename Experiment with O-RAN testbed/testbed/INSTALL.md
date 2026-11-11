@@ -1,6 +1,6 @@
-# Level 3: build the O-RAN testbed and collect a dataset
+# Build the O-RAN testbed and collect a dataset
 
-This is optional. The dataset of the paper is in `data/v5`, and levels 1 and 2 of `../README.md` need no testbed. Follow this guide only if you want to collect new data with the same design.
+This is optional. The dataset of the paper and regeneration of results need no testbed. Follow this guide only if you want to collect new data with the same design.
 
 The guide has two parts:
 - **Part I** builds the testbed. It follows `INTACT_testbed_runbook.md` (in this folder), which gives every command, its expected output, and a fix for each known failure.
