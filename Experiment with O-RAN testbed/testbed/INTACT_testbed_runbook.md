@@ -3,6 +3,7 @@
 ## How to use this runbook
 
 This runbook brings up srsRAN gNB (with jbpf) + srsUE + Open5GS + jrt-controller as plain Linux processes inside one WSL2 distro, then changes a slice's PRB quota live through a jbpf codelet and shows the throughput change. No Kubernetes, no prebuilt images, no GRC broker in the main path (Appendix E adds a headless one for 3–5 UEs; Appendix F adds a FlexRIC nearRT-RIC with an E2 KPM xApp).
+Note: Janus jbpf is not needed for our experiment. It is included as part of the package, for tentative future use.
 
 **Read Part 0 first.** It explains every design choice by the failure it prevents. Then work Parts 1 to 10 strictly in order. Do not skip a gate: every gate exists because skipping it cost hours last time.
 
