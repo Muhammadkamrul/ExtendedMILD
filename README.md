@@ -12,6 +12,9 @@ Dhahran, Saudi Arabia.
 
 ## Guide to Run
 
+## For the Extended SDN testbed and O-RAN testbed implementations, please go to the respective folder for full guideline on how to run the codes.
+
+## Below guideline is for Statistical Benchmark, Microservice Testbed and Simple SDN Edge-to-Cloud Testbed
 1. Setup the dependencies
    
 `python -m pip install --upgrade pip`
