@@ -1,0 +1,104 @@
+{
+  "_comment": "Default settings of the revised SDN testbed. Every value can be overridden with --set key=value.",
+
+  "tick_s": 4.0,
+  "sample_s": 0.5,
+  "rate_window_s": 8,
+  "persist": 3,
+
+  "segment_ticks": 900,
+  "min_segment_ticks": 200,
+  "target_ticks": 45000,
+  "base_seed": 1000,
+
+  "events_per_segment": 20,
+  "p_nonlinear": 0.35,
+  "p_codrift": 0.35,
+  "p_independent": 0.30,
+  "mimics_per_10_events": 3,
+  "dur_min": 14,
+  "dur_max": 28,
+  "mimic_dur_min": 6,
+  "mimic_dur_max": 12,
+  "min_gap": 12,
+  "lag_min": 3,
+  "lag_max": 8,
+  "victim_min_dur": 6,
+  "warmup_ticks": 30,
+  "tail_ticks": 10,
+  "ramp_power": 1.5,
+  "drain_mult": 0.3,
+  "recovery_max": 10,
+  "watchdog_bad_ticks": 40,
+  "api_deadline_s": 2.0,
+
+  "targets": {
+    "api_p95_ms": 300.0,
+    "analytics_tput_min": "auto",
+    "telemetry_q_max": "auto",
+    "sri_low": 85.0,
+    "snet_low": 90.0
+  },
+
+  "initial_scales": {
+    "api": 5.0, "analytics": 20.0, "telemetry": 6.0, "victim": 6.0, "burst": 3.0,
+    "delay_ms": 70.0, "loss_pct": 8.0, "cross": 4.0, "mimic": 0.35,
+    "nl_api": 0.8, "nl_analytics": 0.8, "nl_telemetry": 0.8
+  },
+  "scale_bounds": {
+    "api": [1.5, 15.0], "analytics": [2.0, 120.0], "telemetry": [1.5, 40.0], "victim": [1.5, 40.0],
+    "burst": [1.0, 10.0], "delay_ms": [10.0, 250.0], "loss_pct": [1.0, 25.0], "cross": [1.0, 6.0]
+  },
+
+  "snet_sri_weights": {
+    "snet": {"loss": 1.5, "excess_rtt": 0.35, "jitter": 0.60},
+    "sri": {"http_fail": 100.0, "excess_rtt": 0.15, "loss": 0.50}
+  },
+  "weight_sweep_levels": [[0, 0], [10, 0.5], [25, 1.5], [45, 3], [70, 5], [100, 8], [140, 12]],
+  "weight_sweep_hold_s": 16,
+  "weight_target_snet_at_max": 55,
+  "weight_target_sri_at_max": 60,
+
+  "calib_baseline_ticks": 150,
+  "calib_drain_ticks": 14,
+  "calib_max_iter": 6,
+
+  "api_base_ms": 20.0,
+  "analytics_base_ms": 30.0,
+  "telemetry_base_ms": 4.0,
+  "api_rps_per_site": 6.0,
+  "dash_rps_per_site": 1.0,
+  "dash_jobs_mean": 5.0,
+  "analytics_sched_rate": 4.0,
+  "devices_per_site": 300,
+  "device_period_s": 10.0,
+  "cross_mbps_per_flow": 8.0,
+
+  "use_cgroups": true,
+  "service_cpu_quota_pct": 100,
+  "service_mem_mb": 384,
+  "volume_mb": 256,
+  "volume_mount": "/mnt/mild_cloud_volume",
+
+  "of_port": 6653,
+  "ryu_rest_port": 8080,
+  "prom_port": 9090,
+  "resource_exporter_port": 9100,
+  "mock_port_base": 18000,
+
+  "interp_max_gap": 3,
+  "label_policy": "strict",
+  "min_total_ticks": 36000,
+  "min_events_per_intent": 250,
+  "min_codrift_pairs": 150,
+  "max_missing_rate_per_segment": 0.2,
+
+  "train": {
+    "paper_profile": "sdn",
+    "trials": 20,
+    "fp_budget": 3.0,
+    "test_frac": 0.30,
+    "seeds": "42,43,44",
+    "fp_block": 240
+  }
+}
