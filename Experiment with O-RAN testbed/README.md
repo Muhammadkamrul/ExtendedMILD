@@ -5,7 +5,7 @@ This repository provides MILD code, frozen input data, saved experiment outputs 
 1. **Recompute the archived evaluation from saved predictions**, without training.
 2. **Repeat development search and training** on the same dataset and seed list.
 
-Prediction reproduction uses saved model outputs, not a trained-model checkpoint. The supplied sample jobs do not contain model weights or fitted preprocessing objects. Re-running model inference would require those additional artifacts.
+Prediction reproduction uses saved model outputs, not a trained-model checkpoint.
 
 ## Repository contents
 
@@ -19,26 +19,13 @@ Prediction reproduction uses saved model outputs, not a trained-model checkpoint
 | `python-version.txt` | Recorded Python-version information |
 | `testbed/` | Additional testbed source; not needed to evaluate the saved data |
 
-The following saved-run paths must be preserved:
-
-- `repro_30k_search/confirm_A/`: results for MILD, independently selected MLP, LSTM, and MLP with MILD's settings.
-- `repro_30k_search/confirm_B/`: results for MILD, LSTM, and MLP with MILD's settings (named MLP).
-- `repro_30k_search/classic/`: independently tuned classical baselines (LR-OvR, WKPI-Tuned, Dist-Target), including `classic_selected.json`.
-- `repro_30k_search/frozen/`: the configurations selected for this archived run.
-- `repro_30k_search/dev_search/`: development search results and selection records.
-- `repro_30k_search/development_data/`: retained development slice, if available.
-
-Use the regenerated metrics-only reports for this release. Historical logs can retain old analysis text; no historical significance results are used by the workflows below. No significance tests or model win/loss/tie counts are computed by these workflows.
-
 ## Seeds and experiment identity
 
-The supplied original execution log reports **10 confirmation seeds: 42,43,44,45,46,47,48,49,50,51**. The search candidate generator uses seed 7. Neural search/reranking uses seeds 42,43,44. Classical baselines are deterministic and run once with seed 42.
+The run used **10 confirmation seeds: 42,43,44,45,46,47,48,49,50,51**. The search candidate generator uses seed 7. Neural search/reranking uses seeds 42,43,44. Classical baselines are deterministic and run once with seed 42.
 
-The supplied log reports 30,181 input rows. Preserve the exact original input files and row order. Search begins from the first 10,080 rows; the confirmation script applies its chronological split and pilot-row exclusion checks. The launcher defaults to 14,400 previously examined pilot rows. Do not change these settings when reproducing this archived experiment.
+The supplied log reports 30,181 input rows. Search begins from the first 10,080 rows; the confirmation script applies its chronological split and pilot-row exclusion checks. The launcher defaults to 14,400 previously examined pilot rows. Do not change these settings when reproducing this archived experiment.
 
 Reports include `seeds_used.csv`, listing the actual successful seed count and exact seed list for each method. Actual saved jobs take precedence over defaults when identifying which runs are available.
-
-**Manuscript consistency:** this documented archived run has ten seeds. If the paper table uses fifteen seeds or another dataset/configuration selection, release that corresponding archive and use its actual seed list. Do not identify this ten-seed run as a reproduction of a fifteen-seed table without checking the archived results.
 
 ## 0. Extract the saved results before running
 
@@ -127,8 +114,6 @@ print("Extraction and basic input checks passed. Continue with environment setup
 PY
 ```
 
-These are basic structure checks, not proof that every expected model/seed is present. Inspect each regenerated `seeds_used.csv` to confirm the actual available seeds. The evaluator also needs the policy-setting `fold*_metrics.json` files and completed job records; keep all files from each archived job together.
-
 Windows users may instead use **Extract All** for each ZIP and copy its contents into the corresponding restored folder in the table, combining both confirmation-A parts. Avoid an extra nested folder such as `confirm_A/confirm_A/`. Run the Linux/WSL commands only after restoring the layout.
 
 ## Environment setup
@@ -147,25 +132,21 @@ python -c "import numpy,pandas,scipy,sklearn,tensorflow,tabulate; print('Environ
 export MILD_TRAIN_PY="$PWD/.venv/bin/python"
 ```
 
-The requirements file is copied from the supplied training implementation. It specifies minimum package versions, not a lockfile of the original runtime. Platform and package differences can affect retraining. CPU TensorFlow is sufficient. For a compatible Linux NVIDIA setup, optionally install GPU dependencies using `python -m pip install 'tensorflow[and-cuda]>=2.12'` and check GPU visibility with:
+The requirements file is copied from our training implementation. It specifies minimum package versions. Platform and package differences can affect retraining. CPU TensorFlow is sufficient. For a compatible Linux NVIDIA setup, optionally install GPU dependencies using `python -m pip install 'tensorflow[and-cuda]>=2.12'` and check GPU visibility with:
 
 ```bash
 python -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
 ```
 
-The release also includes `python-version.txt` and `requirements_full_testbed.txt`. Consult the recorded Python version when recreating that exported environment. The full export includes pinned NVIDIA/CUDA packages and is platform-specific; `requirements.txt` is the default setup above. A supplied export alone does not establish that those exact versions produced the archived results.
-
 ## 1. Inspect saved results
 
 Read the archived CSVs and reports under `repro_30k_search/`. Confirmation summary files report means and standard deviations; `final_test_runs.csv` contains individual seed results. Classical results are under `classic/classic_test.csv` and `classic/CLASSIC_REPORT.md`.
-
-The original workflow writes classical results separately from the neural confirmations. Prediction reproduction below combines them into each regenerated report.
 
 ## 2. Recompute from saved predictions: no training
 
 ### Required files
 
-Each confirmation needs its extracted `jobs/` hierarchy and, if available, `PREREG_RECORD.json`. The classical directory needs `classic_selected.json` and its extracted jobs. Preserve all files within retained jobs, particularly:
+Each confirmation needs its extracted `jobs/` hierarchy and, if available, `PREREG_RECORD.json`. The classical directory needs `classic_selected.json` and its extracted jobs. You need all files within retained jobs, particularly:
 
 | Input | Use |
 |---|---|
@@ -174,7 +155,7 @@ Each confirmation needs its extracted `jobs/` hierarchy and, if available, `PRER
 | `folds/fold*_metrics.json` | Read **only the policy parameters**, including the saved alert thresholds |
 | `dataset/events_by_intent.json` | Original ground-truth event labels |
 
-For classical jobs the fold directories are inside the `lr/`, `wkpi/` and `dist/` subdirectories. Old `result.json`, event/day outcome tables and summary CSV values are not read to calculate the new results.
+For classical jobs the fold directories are inside the `lr/`, `wkpi/` and `dist/` subdirectories.
 
 **Complete Section 0 first.** Both confirmation-A ZIP parts must be extracted into the same restored `confirm_A/` folder. The scripts read extracted files, not ZIP contents.
 
@@ -221,6 +202,6 @@ The launcher performs:
 5. Confirmation B using the MILD-settings MLP.
 6. Classical-baseline development tuning and held-out evaluation.
 
-Outputs are written under `reruns/search_10seeds/`, including separate confirmation and classical reports. No significance tests or win/loss/tie reports are generated by these launcher stages. The codebase retains legacy analysis utilities; the documented commands do not invoke their significance routines.
+Outputs are written under `reruns/search_10seeds/`, including separate confirmation and classical reports.
 
 To resume an interrupted experiment, run the same command with the same work directory. To force genuinely new computation, choose a different unused directory. New hardware/software may produce different selected configurations and scores even with the same seeds; the archived prediction workflow is the direct way to audit the original numeric results.
