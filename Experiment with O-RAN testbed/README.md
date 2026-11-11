@@ -13,8 +13,11 @@ Prediction reproduction uses saved model outputs, not a trained-model checkpoint
 |---|---|
 | `confirm_v6/` | Experiment launcher, helpers, configuration files, and complete implementation under `MILD_V6/MILD_unified_repro/` |
 | `dataset/` | The exact original dataset used for this release: `dataset.csv`, `events_by_intent.json`, and other retained data/provenance files |
-| `repro_30k_search/` | Original search outputs, selected configurations, confirmation runs, classical runs, logs and prediction jobs |
+| `repro_30k_search/` | Seven ZIP archives of saved search outputs, configurations, confirmation/classical results and prediction jobs; extract before use |
 | `requirements.txt` | Dependencies for the reproduction/training workflow |
+| `requirements_full_testbed.txt` | Additional pinned environment export supplied with the release (includes NVIDIA packages) |
+| `python-version.txt` | Recorded Python-version information |
+| `testbed/` | Additional testbed source; not needed to evaluate the saved data |
 
 The following saved-run paths must be preserved:
 
@@ -36,6 +39,97 @@ The supplied log reports 30,181 input rows. Preserve the exact original input fi
 Reports include `seeds_used.csv`, listing the actual successful seed count and exact seed list for each method. Actual saved jobs take precedence over defaults when identifying which runs are available.
 
 **Manuscript consistency:** this documented archived run has ten seeds. If the paper table uses fifteen seeds or another dataset/configuration selection, release that corresponding archive and use its actual seed list. Do not identify this ten-seed run as a reproduction of a fifteen-seed table without checking the archived results.
+
+## 0. Extract the saved results before running
+
+All commands below must run from **`Experiment with O-RAN testbed/`**, the directory containing this README, `confirm_v6/`, `dataset/` and `repro_30k_search/`. Quote the path when changing directories because its name contains spaces:
+
+```bash
+cd "/your/local/path/ExtendedMILD/Experiment with O-RAN testbed"
+```
+
+Replace the example with your actual local path. Download or clone the complete experiment directory first, including **all seven ZIPs** in `repro_30k_search/`:
+
+| ZIP | Restored folder |
+|---|---|
+| `confirm_A_part01.zip` and `confirm_A_part02.zip` | `repro_30k_search/confirm_A/` (combined) |
+| `confirm_B.zip` | `repro_30k_search/confirm_B/` |
+| `classic.zip` | `repro_30k_search/classic/` |
+| `dev_search.zip` | `repro_30k_search/dev_search/` |
+| `development_data.zip` | `repro_30k_search/development_data/` |
+| `frozen.zip` | `repro_30k_search/frozen/` |
+
+The two confirmation-A files are **independent ordinary ZIPs** containing different files under the same `confirm_A/` directory. Extract both; do not concatenate them or create separate `confirm_A_part01/` and `confirm_A_part02/` directories.
+
+### Automatic extraction and basic checks
+
+Run the block below once using Python 3 (no extra packages are needed). It extracts all archives into the correct folders, whether an archive includes its named top-level folder or just that folder's contents. Existing extracted files with the same paths will be overwritten; original ZIPs remain unchanged.
+
+```bash
+python3 - <<'PY'
+from pathlib import Path, PurePosixPath
+from zipfile import ZipFile
+
+root = Path.cwd()
+base = root / "repro_30k_search"
+archives = [
+    ("confirm_A_part01.zip", "confirm_A"),
+    ("confirm_A_part02.zip", "confirm_A"),
+    ("confirm_B.zip", "confirm_B"),
+    ("classic.zip", "classic"),
+    ("dev_search.zip", "dev_search"),
+    ("development_data.zip", "development_data"),
+    ("frozen.zip", "frozen"),
+]
+missing = [str(base / name) for name, _ in archives if not (base / name).is_file()]
+if missing:
+    raise SystemExit("Download the missing archives first:\n" + "\n".join(missing))
+
+for name, folder in archives:
+    with ZipFile(base / name) as z:
+        files = [m for m in z.infolist() if not m.is_dir()]
+        if not files:
+            raise SystemExit(f"Empty archive: {name}")
+        paths = [PurePosixPath(m.filename) for m in files]
+        if any(p.is_absolute() or ".." in p.parts for p in paths):
+            raise SystemExit(f"Unexpected archive paths: {name}")
+        if all(p.parts[:2] == ("repro_30k_search", folder) for p in paths):
+            destination = root
+        elif all(p.parts[0] == folder for p in paths):
+            destination = base
+        else:
+            destination = base / folder
+        bad = z.testzip()
+        if bad:
+            raise SystemExit(f"Damaged ZIP {name}: {bad}")
+        z.extractall(destination)
+        print(f"Extracted {name}")
+
+required = [
+    root / "dataset/dataset.csv",
+    root / "dataset/events_by_intent.json",
+    root / "confirm_v6/reproduce_v6.sh",
+    root / "confirm_v6/MILD_V6/MILD_unified_repro/confirm_v6.py",
+    root / "confirm_v6/MILD_V6/MILD_unified_repro/recompute_saved_jobs.py",
+    base / "classic/classic_selected.json",
+]
+missing = [str(p) for p in required if not p.is_file()]
+for run in ("confirm_A", "confirm_B", "classic"):
+    jobs = base / run / "jobs"
+    specs = list(jobs.glob("*/*/spec.json"))
+    if not specs:
+        missing.append(str(jobs / "<method>/<job-id>/spec.json"))
+    elif not list(jobs.glob("*/*/**/folds/fold1_timeseries.csv")):
+        missing.append(str(jobs) + " (saved fold predictions missing)")
+if missing:
+    raise SystemExit("Check the extracted layout or missing uploads:\n" + "\n".join(missing))
+print("Extraction and basic input checks passed. Continue with environment setup and prediction reproduction.")
+PY
+```
+
+These are basic structure checks, not proof that every expected model/seed is present. Inspect each regenerated `seeds_used.csv` to confirm the actual available seeds. The evaluator also needs the policy-setting `fold*_metrics.json` files and completed job records; keep all files from each archived job together.
+
+Windows users may instead use **Extract All** for each ZIP and copy its contents into the corresponding restored folder in the table, combining both confirmation-A parts. Avoid an extra nested folder such as `confirm_A/confirm_A/`. Run the Linux/WSL commands only after restoring the layout.
 
 ## Environment setup
 
@@ -59,7 +153,7 @@ The requirements file is copied from the supplied training implementation. It sp
 python -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
 ```
 
-For archival provenance, retain an environment export from the original training environment if available. A `pip freeze` from a newly installed environment documents that new environment, not the historical one.
+The release also includes `python-version.txt` and `requirements_full_testbed.txt`. Consult the recorded Python version when recreating that exported environment. The full export includes pinned NVIDIA/CUDA packages and is platform-specific; `requirements.txt` is the default setup above. A supplied export alone does not establish that those exact versions produced the archived results.
 
 ## 1. Inspect saved results
 
@@ -82,15 +176,7 @@ Each confirmation needs its extracted `jobs/` hierarchy and, if available, `PRER
 
 For classical jobs the fold directories are inside the `lr/`, `wkpi/` and `dist/` subdirectories. Old `result.json`, event/day outcome tables and summary CSV values are not read to calculate the new results.
 
-If distributing jobs as ZIPs, extract each archive into its corresponding run directory. An archive containing top-level `jobs/` must result in:
-
-```text
-repro_30k_search/confirm_A/jobs/<method>/<job-id>/
-repro_30k_search/confirm_B/jobs/<method>/<job-id>/
-repro_30k_search/classic/jobs/<method>/<job-id>/
-```
-
-The scripts cannot read job CSVs directly inside a ZIP. Do not mix A, B and classical job directories together.
+**Complete Section 0 first.** Both confirmation-A ZIP parts must be extracted into the same restored `confirm_A/` folder. The scripts read extracted files, not ZIP contents.
 
 ### Run
 
