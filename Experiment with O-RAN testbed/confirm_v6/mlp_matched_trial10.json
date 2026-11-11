@@ -1,0 +1,20 @@
+{
+  "trial": 10,
+  "cfg": {
+    "alarm_loss": "bce",
+    "batch": 256,
+    "distill_alpha": 1.0,
+    "epochs": 20,
+    "features": "onset",
+    "fp_budget": 1.0,
+    "fp_scope": "own",
+    "horizon": 42,
+    "patience": 8,
+    "protocol_v6": true,
+    "temp": 2.0,
+    "thr_budget_fixed": true,
+    "thr_rule": "expected_lead",
+    "threshold_mode": "holdout",
+    "val_frac": 0.4
+  }
+}

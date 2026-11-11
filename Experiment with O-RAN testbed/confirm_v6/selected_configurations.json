@@ -1,0 +1,77 @@
+{
+  "mild": {
+    "trial": 10,
+    "mean_score": 95.59888832997986,
+    "cfg": {
+      "seed": 42,
+      "temp": 2.0,
+      "use_teacher_gate": false,
+      "lambda_decorr": 0.0001,
+      "teacher_max_iter": 600,
+      "patience": 8,
+      "horizon": 42,
+      "epochs": 20,
+      "batch": 256,
+      "fp_budget": 1.0,
+      "gate_supervise": 0.5,
+      "gate_sparsity": 0.001,
+      "distill_alpha": 1.0,
+      "gate_teacher": 0.0,
+      "protocol_v6": true,
+      "features": "onset",
+      "thr_budget_fixed": true,
+      "fp_scope": "own",
+      "val_frac": 0.4,
+      "thr_rule": "expected_lead",
+      "threshold_mode": "holdout",
+      "gate_mode": "residual",
+      "gate_use": "scale",
+      "alarm_loss": "bce"
+    }
+  },
+  "mlp": {
+    "trial": 12,
+    "mean_score": 82.12399591996423,
+    "cfg": {
+      "seed": 42,
+      "horizon": 42,
+      "epochs": 30,
+      "batch": 128,
+      "fp_budget": 1.0,
+      "protocol_v6": true,
+      "features": "onset",
+      "thr_budget_fixed": true,
+      "fp_scope": "own",
+      "val_frac": 0.4,
+      "thr_rule": "expected_lead",
+      "threshold_mode": "holdout",
+      "distill_alpha": 0.5,
+      "temp": 2.0,
+      "patience": 8,
+      "alarm_loss": "paper_focal"
+    }
+  },
+  "lstm": {
+    "trial": 17,
+    "mean_score": 99.83022747596692,
+    "cfg": {
+      "seed": 42,
+      "horizon": 32,
+      "lookback": 60,
+      "epochs": 20,
+      "batch": 256,
+      "fp_budget": 1.0,
+      "protocol_v6": true,
+      "features": "onset",
+      "thr_budget_fixed": true,
+      "fp_scope": "own",
+      "val_frac": 0.4,
+      "thr_rule": "expected_lead",
+      "threshold_mode": "crossfit",
+      "distill_alpha": 0.5,
+      "temp": 2.0,
+      "patience": 8,
+      "alarm_loss": "paper_focal"
+    }
+  }
+}
