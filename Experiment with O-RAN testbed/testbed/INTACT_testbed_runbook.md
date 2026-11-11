@@ -1,4 +1,4 @@
-# WSL2 — srsRAN + Open5GS + Janus jbpf, bare-metal runbook
+# Installation of srsRAN + Open5GS + Janus jbpf in WSL in windows
 
 ## How to use this runbook
 
