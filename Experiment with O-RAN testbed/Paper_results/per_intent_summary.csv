@@ -1,7 +1,0 @@
-method,det_analytics,det_api,det_telemetry
-Dist-Target,0,0,5.7
-LR-OvR,52.4,5.1,11.3
-LSTM,99.8,83.1,15.8
-MILD,94.3,81.4,40
-MLP,96.3,81.7,6
-WKPI-Tuned,0,0,3.8
