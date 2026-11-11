@@ -17,13 +17,13 @@ Keep these three directories beside this README:
 
 - `MILD_SDN_testbed_v2/`: testbed, collector, calibration, dataset construction, quality checks, and training wrapper.
 - `MILD_unified_repro/`: the matching training/evaluation implementation, including `autotrain.py` and all its dependencies.
-- `mild_sdn2_train_v3_30k_PaperData/`: frozen dataset, published results, logs, and collection snapshot.
+- `Paper_results/`: frozen dataset, published results, logs, and collection snapshot.
 
 The testbed wrapper locates `MILD_unified_repro` as a sibling directory. Despite its name, `MILD_SDN_testbed_v2` implements the extended testbed described here.
 
 ## Saved results
 
-No installation is needed to inspect these files under `mild_sdn2_train_v3_30k_PaperData/`:
+No installation is needed to inspect these files under `Paper_results/`:
 
 | File or directory | Purpose |
 |---|---|
@@ -44,6 +44,8 @@ No installation is needed to inspect these files under `mild_sdn2_train_v3_30k_P
 
 Use the `tuned` variants for the main Protocol B comparison. Original-profile (`paper`) variants are separate comparisons and should not be averaged together with tuned variants. Classical baselines are deterministic; repeated seed entries do not constitute independent randomized fits.
 
+To reanalyse the saved predictions without retraining, extract jobs.zip into Paper_results/training/. After extraction, the path should be training/jobs/<method>/<job-id>/. The scripts need the extracted folder; they cannot read jobs directly from the ZIP.
+
 The manuscript reports the following tuned-model means:
 
 | Model | Detection (%) | Lead time (steps) | FP / 1440 steps | Disambiguation accuracy (%) |
@@ -61,8 +63,8 @@ One step is a **4-second tick**. The FP denominator of 1440 steps is a simulated
 
 The input files are:
 
-- `mild_sdn2_train_v3_30k_PaperData/dataset/dataset.csv`
-- `mild_sdn2_train_v3_30k_PaperData/dataset/events_by_intent.json`
+- `Paper_results/dataset/dataset.csv`
+- `Paper_results/dataset/events_by_intent.json`
 
 The original training log records **29,765 rows** and **859 labeled intent events**: 231 Analytics, 283 API, and 345 Telemetry events. These are intent-event counts, not necessarily distinct injected root-cause episodes.
 
@@ -72,7 +74,7 @@ Protocol B uses a chronological development/test split. The original audit repor
 
 ### 1. Prepare the training environment
 
-Use a Linux shell (Ubuntu or WSL2), starting at the repository root. Data-only training does not require root privileges, Ryu, Mininet, or a running testbed.
+I used a Linux shell (Ubuntu or WSL2), starting at the repository root. Data-only training does not require root privileges, Ryu, Mininet, or a running testbed.
 
 Use the training dependencies supplied with the released `MILD_unified_repro` version. The testbed installer specifies Python 3.11 and TensorFlow, NumPy, pandas, scikit-learn, SciPy, matplotlib, SHAP, and tabulate. A baseline CPU environment can be created as follows:
 
@@ -82,7 +84,6 @@ source .venv-train/bin/activate
 python -m pip install --upgrade pip
 python -m pip install -r MILD_unified_repro/requirements.txt
 ```
-
 The supplied requirements use minimum versions rather than exact pins; they are not a recovered lockfile of the original experiment. Prefer the archived environment specification if supplied with the release. For GPU training, use a TensorFlow/CUDA combination compatible with your machine. The original command used `/home/windows/mild-venv/bin/python`; this local interpreter path does not identify all installed versions.
 
 ### 2. Run the logged experiment on the frozen data
@@ -95,8 +96,8 @@ mkdir -p "$REPO_ROOT/reproduced"
 cd "$REPO_ROOT/MILD_unified_repro"
 
 python autotrain.py \
-  --data_csv "$REPO_ROOT/mild_sdn2_train_v3_30k_PaperData/dataset/dataset.csv" \
-  --events_json "$REPO_ROOT/mild_sdn2_train_v3_30k_PaperData/dataset/events_by_intent.json" \
+  --data_csv "$REPO_ROOT/Paper_results/dataset/dataset.csv" \
+  --events_json "$REPO_ROOT/Paper_results/dataset/events_by_intent.json" \
   --out "$REPO_ROOT/reproduced/training" \
   --paper_profile sdn \
   --trials 20 \
@@ -111,11 +112,9 @@ python autotrain.py \
   > "$REPO_ROOT/reproduced/training.log" 2>&1
 ```
 
-This is the command recorded in `train_now.log`, with portable input/output paths and without the optional `nice -n 10` scheduling prefix. It additionally makes the supplied training code's defaults explicit: search seed 7 and reranking seeds 43,44. Initial search trials use seed 42; neural candidates are reranked over seeds 42,43,44. The profile name is `sdn` even though these data come from the extended testbed. Do not change it to an invented extended-testbed profile.
-
 Write to a fresh output directory to perform a new computation. The training pipeline caches jobs; using the archived `training/` directory could reuse prior computations. Keep the paper archive unchanged.
 
-The original run finished successfully in approximately **97.4 minutes** on the author's machine; runtime depends on hardware and software versions.
+The original run finished successfully in approximately **97.4 minutes** on our machine; runtime depends on hardware and software versions.
 
 ### 3. Check the outputs
 
@@ -127,15 +126,7 @@ The CLI `--fp_budget 3.0` is the logged search setting. It should not be replace
 
 The supplied significance implementation tests each seed separately with Holm correction, then uses a consensus rule requiring at least two thirds of seeds and no significant opposite result. The aggregate `p_holm` is a median over seeds, not a pooled p-value. See `mild_repro/stats.py` and the reports for the full procedure.
 
-Seed-level paired tests measure consistency over training seeds on one shared test partition, not generalization over independently collected datasets. Read the archived trust report alongside significance results: the original wrapper reported **USABLE WITH CAVEATS**.
-
-## Dataset provenance
-
-`train_now.log` records a snapshot of **34 completed main segments** from the author's collection state, followed by dataset construction and training on 14 October 2026. The original local source was `mild_sdn2_state_v3`; the original output directory was `mild_sdn2_train_v3_30k`.
-
-Preserve `snapshot/` together with its manifests, segment data, calibration/configuration files, and any retained quality/provenance files. It supports auditing how the frozen dataset was built. Retraining on the frozen CSV/JSON above is the primary reproduction workflow; reviewers do not need to rebuild the dataset or collect new measurements.
-
-The collection design uses two edge sites, a WAN, and two cloud racks, with API, Analytics, and Telemetry services. Faults and mimics generate precursor behavior and co-drift. Labeled failures require observed violations; see the collector, calibration, salvage, and quality-check code and the manuscript for exact rules.
+Seed-level paired tests measure consistency over training seeds on one shared test partition, not generalization over independently collected datasets.
 
 ## Optional collection of new data
 
@@ -193,14 +184,6 @@ python train_now.py \
 
 Read the new suitability and trust reports before interpreting results. Do not combine new-data scores with the archived paper scores.
 
-## Release provenance
-
-The experiment command and counts above were recovered from the original logs. The expected metrics were transcribed from the accompanying manuscript. The uploaded testbed source confirms the wrapper arguments. The supplied dataset was checked directly: 29,765 CSV rows and event counts 283 API, 231 Analytics, and 345 Telemetry. The saved runs contain all five seeds and both variants (60 rows total). Recomputing tuned means and sample standard deviations from those runs agrees with the supplied summary and manuscript to two decimal places. No full training rerun was performed during this verification.
-
-The `training.zip` supplied for documentation contains summaries and operating-curve outputs but **does not contain `jobs/`**. Include the original `training/jobs/` in the public archive if available. It contains job specifications and time-series predictions needed to independently recompute the archived significance and equal-FP analyses without retraining. A fresh full training run creates its own jobs. If jobs are omitted from the release, state that the release supports inspection and retraining but not recomputation from archived predictions alone.
-
-The raw `snapshot/` and original full runtime environment were not included in this documentation check. Exact recovery of the outer `train_now.py` shell invocation, package versions, and complete collection history cannot be inferred from defaults alone.
-
 ### Input checksums (SHA-256)
 
 ```text
@@ -210,5 +193,5 @@ cb99518d9e49129c3ff3eb1de3d6eb221cca2070e73e58e70119f035165c75a9  dataset/datase
 
 ### Assembling the release from the ZIP files
 
-Extract `MILD_unified_repro.zip` **into a directory named `MILD_unified_repro/`**: its files are at the archive root. Similarly, extract `training.zip` **into `mild_sdn2_train_v3_30k_PaperData/training/`**. The dataset archive already contains a `dataset/` directory; extract it into `mild_sdn2_train_v3_30k_PaperData/`. Do not extract all three archives into one directory. Add the original logs/reports, `snapshot/`, and `training/jobs/` from the paper-data folder. Exclude `__pycache__/` and `.pyc` files.
+Extract `MILD_unified_repro.zip` **into a directory named `MILD_unified_repro/`**: its files are at the archive root. Similarly, extract `training.zip` **into `Paper_results/training/`**. The dataset archive already contains a `dataset/` directory; extract it into `Paper_results/`. Do not extract all three archives into one directory. Add the original logs/reports and `training/jobs/` from the paper-data folder. Exclude `__pycache__/` and `.pyc` files.
 
