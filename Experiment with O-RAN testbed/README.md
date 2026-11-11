@@ -1,6 +1,6 @@
 # MILD in O-RAN testbed: saved-results reproduction and fresh training
 
-This repository provides MILD V6 code, frozen input data, saved experiment outputs and prediction jobs. It supports two workflows:
+This repository provides MILD code, frozen input data, saved experiment outputs and prediction jobs. It supports two workflows:
 
 1. **Recompute the archived evaluation from saved predictions**, without training.
 2. **Repeat development search and training** on the same dataset and seed list.
