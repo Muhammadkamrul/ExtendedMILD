@@ -1,6 +1,6 @@
 # MILD: extended SDN testbed and paper reproduction
 
-This release accompanies the **extended SDN-based testbed** experiments in the MILD paper. It covers Protocol B, not the first SDN testbed or the O-RAN experiments.
+This readme accompanies the **extended SDN-based testbed** experiments in the MILD paper. It covers Protocol B, not the first SDN testbed or the O-RAN experiments.
 
 Choose the workflow that matches your goal:
 
